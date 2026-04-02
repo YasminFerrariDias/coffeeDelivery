@@ -3,6 +3,7 @@ import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
 import { Button } from './components/Button'
 import { Title } from './components/Title'
+import { Text } from './components/Text'
 
 export function App() {
   return (
@@ -16,11 +17,24 @@ export function App() {
       <Title variant='title-s' text='Título S' />
       <br />
       <Title variant='title-xs' text='Título XS' />
-      
+      <br />
+      <Text variant='text-l' text='Texto L'/>
+      <br />
+      <Text variant='text-l-bold' text='Texto L - BOLD'/>
+      <br />
+      <Text variant='text-m' text='Texto M'/>
+      <br />
+      <Text variant='text-m-bold' text='Texto M - BOLD'/>
+      <br />
+      <Text variant='text-s' text='Texto S'/>
+      <br />
+      <Text variant='text-xs' text='Texto XS'/>
+      <br />
+   
+
       <Button icon='MapPin' text='Porto Alegre, RS' variant='purple'/>
       <Button icon='ShoppingCart' variant='yellow'/>
 
-      <h1>Teste</h1>
       <GlobalStyle />
     </ThemeProvider>
   )
