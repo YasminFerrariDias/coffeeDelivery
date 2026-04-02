@@ -1,7 +1,10 @@
-import { HeaderContainer } from './styles'
+import { HeaderContainer } from './styles';
 
 export function Header() {
-  <HeaderContainer>
-    
-  </HeaderContainer>
+
+  return (
+    <HeaderContainer>
+      
+    </HeaderContainer>
+  )
 }

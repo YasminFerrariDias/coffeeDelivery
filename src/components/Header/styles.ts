@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import styled from "styled-components";
 
-export const HeaderContainer = createGlobalStyle`
+export const HeaderContainer = styled.div`
   
 `;

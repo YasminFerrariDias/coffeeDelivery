@@ -1,7 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  .title-xl {
+  * {
+    margin: 0;
+  }
+
+  body {
+    background: ${(props) => props.theme['background']};
+  }
+
+  .title-xl { 
     font-family: 'Baloo 2', sans-serif;
     font-size: 3rem; /* 48px */
     line-height: 130%;
