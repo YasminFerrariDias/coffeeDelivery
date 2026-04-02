@@ -5,7 +5,7 @@ export function ButtonCart() {
 
   return (
     <ButtonCartContainer>
-      <ShoppingCart />
+      <ShoppingCart size={22} />
     </ButtonCartContainer>
   )
 }
