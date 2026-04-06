@@ -9,6 +9,7 @@ interface TextProps {
   | 'text-m-bold'
   | 'text-s'
   | 'text-xs'
+  | 'tag'
   text: string,
   color: keyof DefaultTheme;
 }

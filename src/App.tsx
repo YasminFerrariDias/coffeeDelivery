@@ -5,6 +5,7 @@ import { Button } from './components/Button'
 import { Title } from './components/Title'
 import { Text } from './components/Text'
 import { Advantages } from './components/Advantages'
+import { Tag } from './components/Tag'
 
 export function App() {
   return (
@@ -45,6 +46,10 @@ export function App() {
         <Advantages icon='Clock' text='Entrega rápida e rastreada' variant={'text-m'} color={'base-text'} IconColor='yellow' />
         <Advantages icon='Box' text='Embalagem mantém o café intacto' variant={'text-m'} color={'base-text'} IconColor='base-text' />
         <Advantages icon='Coffee' text='O café chega fresquinho até você' variant={'text-m'} color={'base-text'} IconColor='purple-dark' />
+      </div>
+
+      <div className="tag">
+        <Tag text='TRADICIONAL' color='yellow-dark' variant='tag' BackgroundColor='yellow-light'/>
       </div>
 
       <GlobalStyle />
