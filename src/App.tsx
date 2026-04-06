@@ -6,6 +6,7 @@ import { Title } from './components/Title'
 import { Text } from './components/Text'
 import { Advantages } from './components/Advantages'
 import { Tag } from './components/Tag'
+import { Count } from './components/Count'
 
 export function App() {
   return (
@@ -48,8 +49,12 @@ export function App() {
         <Advantages icon='Coffee' text='O café chega fresquinho até você' variant={'text-m'} color={'base-text'} IconColor='purple-dark' />
       </div>
 
-      <div className="tag">
+      <div className="Tag">
         <Tag text='TRADICIONAL' color='yellow-dark' variant='tag' BackgroundColor='yellow-light'/>
+      </div>
+
+      <div className="Count">
+        <Count />
       </div>
 
       <GlobalStyle />
