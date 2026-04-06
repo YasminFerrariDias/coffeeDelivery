@@ -7,6 +7,7 @@ import { Text } from './components/Text'
 import { Advantages } from './components/Advantages'
 import { Tag } from './components/Tag'
 import { Count } from './components/Count'
+import { Price } from './components/Price'
 
 export function App() {
   return (
@@ -55,6 +56,10 @@ export function App() {
 
       <div className="Count">
         <Count />
+      </div>
+
+      <div className="Price">
+        <Price price='9,90' />
       </div>
 
       <GlobalStyle />
