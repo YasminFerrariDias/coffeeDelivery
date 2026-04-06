@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface AdvantagesContainerProps {
-  $variant: 'yellow-dark' | 'yellow' | 'gray' | 'purple'
+  $IconVariant: 'yellow-dark' | 'yellow' | 'gray' | 'purple'
 }
 
 export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
@@ -22,17 +22,17 @@ export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
     flex-direction: column;
 
     background: ${(props) => {
-      switch (props.$variant) {
-    case 'yellow':
-      return props.theme['yellow'];
-    case 'yellow-dark':
-      return props.theme['yellow-dark'];
-    case 'gray':
-      return props.theme['base-text'];
-    case 'purple':
-      return props.theme['purple-dark'];
-    default:
-      return props.theme['white'];
+    switch (props.$IconVariant) {
+      case 'yellow':
+        return props.theme['yellow'];
+      case 'yellow-dark':
+        return props.theme['yellow-dark'];
+      case 'gray':
+        return props.theme['base-text'];
+      case 'purple':
+        return props.theme['purple-dark'];
+      default:
+        return props.theme['white'];
     }
   }}
 }
