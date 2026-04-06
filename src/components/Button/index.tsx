@@ -1,23 +1,25 @@
 import { ShoppingCart, MapPin } from 'lucide-react';
 import { ButtonContainer } from './styles';
+import type { ComponentProps } from 'react';
+import { Text } from '../Text'
 
-interface ButtonProps {
+type TextProps = ComponentProps<typeof Text>
+
+interface ButtonProps extends TextProps {
   icon: 'ShoppingCart' | 'MapPin',
-  text?: string,
-  variant: 'yellow' | 'purple'
-  className?: 'tag' | 'button-g' | 'button-m' | 'text-s'
+  colorVariant: 'yellow' | 'purple'
 }
 
-export function Button({ icon, text, variant, className }: ButtonProps) {
+export function Button({ icon, colorVariant, variant, color, text }: ButtonProps) {
   const Icon = {
     ShoppingCart,
     MapPin,
   }[icon]
 
   return (
-    <ButtonContainer $variant={variant} className={className}>
+    <ButtonContainer $colorVariant={colorVariant}>
       <Icon size={22} />
-      {text && <span>{text}</span>}
+      <Text color={color} text={text} variant={variant}/>
     </ButtonContainer>
   )
 }

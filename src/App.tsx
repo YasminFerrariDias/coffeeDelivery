@@ -36,8 +36,8 @@ export function App() {
       </div>
 
       <div className='Button'>
-        <Button icon='MapPin' text='Porto Alegre, RS' variant='purple' className='text-s' />
-        <Button icon='ShoppingCart' variant='yellow' />
+        <Button icon='MapPin' text='Porto Alegre, RS' color='purple-dark' colorVariant='purple' variant='text-s' />
+        <Button icon='ShoppingCart' colorVariant='yellow' color='yellow-dark' variant='text-s' text=''/>
       </div>
 
       <div className="Advantages">
