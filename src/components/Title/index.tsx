@@ -1,3 +1,4 @@
+import type { DefaultTheme } from "styled-components/dist/types"
 import { TitleContainer } from "./styles"
 
 interface TitleProps {
@@ -8,11 +9,12 @@ interface TitleProps {
   | 'title-s'
   | 'title-xs'
   text: string,
+  color: keyof DefaultTheme
 }
 
-export function Title({ variant, text }: TitleProps) {
+export function Title({ variant, text, color }: TitleProps) {
   return (
-    <TitleContainer className={variant}>
+    <TitleContainer className={variant} $color={color}>
       {text && <span>{text}</span>}
     </TitleContainer>
   )

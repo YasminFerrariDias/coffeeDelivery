@@ -34,5 +34,6 @@ export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
     default:
       return props.theme['white'];
     }
-  }}}
+  }}
+}
 `

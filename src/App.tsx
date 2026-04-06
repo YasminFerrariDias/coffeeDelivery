@@ -10,29 +10,29 @@ export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <div className='Title'>
-        <Title variant='title-xl' text='Título XL' />
+        <Title variant='title-xl' text='Título XL' color='base-text' />
         <br />
-        <Title variant='title-l' text='Título L' />
+        <Title variant='title-l' text='Título L' color='base-subtitle' />
         <br />
-        <Title variant='title-m' text='Título M' />
+        <Title variant='title-m' text='Título M' color='base-subtitle' />
         <br />
-        <Title variant='title-s' text='Título S' />
+        <Title variant='title-s' text='Título S' color='base-title' />
         <br />
-        <Title variant='title-xs' text='Título XS' />
+        <Title variant='title-xs' text='Título XS' color='base-subtitle' />
       </div>
 
       <div className='Text'>
-        <Text variant='text-l' text='Texto L' />
+        <Text variant='text-l' text='Texto L' color='base-text' />
         <br />
-        <Text variant='text-l-bold' text='Texto L - BOLD' />
+        <Text variant='text-l-bold' text='Texto L - BOLD' color='base-title' />
         <br />
-        <Text variant='text-m' text='Texto M' />
+        <Text variant='text-m' text='Texto M' color='base-text' />
         <br />
-        <Text variant='text-m-bold' text='Texto M - BOLD' />
+        <Text variant='text-m-bold' text='Texto M - BOLD' color='purple' />
         <br />
-        <Text variant='text-s' text='Texto S' />
+        <Text variant='text-s' text='Texto S' color='base-text' />
         <br />
-        <Text variant='text-xs' text='Texto XS' />
+        <Text variant='text-xs' text='Texto XS' color='base-subtitle' />
       </div>
 
       <div className='Button'>

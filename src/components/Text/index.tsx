@@ -1,3 +1,4 @@
+import type { DefaultTheme } from "styled-components"
 import { TextContainer } from "./styles"
 
 interface TextProps {
@@ -9,11 +10,12 @@ interface TextProps {
   | 'text-s'
   | 'text-xs'
   text: string,
+  color: keyof DefaultTheme;
 }
 
-export function Text({ variant, text }: TextProps) {
+export function Text({ variant, text, color}: TextProps) {
   return (
-    <TextContainer className={variant}>
+    <TextContainer className={variant} $color={color}>
       {text && <span>{text}</span>}
     </TextContainer>
   )
