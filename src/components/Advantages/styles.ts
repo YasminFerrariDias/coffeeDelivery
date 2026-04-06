@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { type DefaultTheme } from "styled-components";
 
 interface AdvantagesContainerProps {
-  $IconVariant: 'yellow-dark' | 'yellow' | 'gray' | 'purple'
+  $IconColor: keyof DefaultTheme;
 }
 
 export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
@@ -10,7 +10,8 @@ export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
   gap: 0.75rem;
   align-items: center;
 
-  .icon {
+  .icon {  
+    background: ${(props) => props.theme[props.$IconColor]};
     color: white;
     height: 2rem;
     width: 2rem;
@@ -20,20 +21,5 @@ export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
     padding: 0.25rem;
     display: flex;
     flex-direction: column;
-
-    background: ${(props) => {
-    switch (props.$IconVariant) {
-      case 'yellow':
-        return props.theme['yellow'];
-      case 'yellow-dark':
-        return props.theme['yellow-dark'];
-      case 'gray':
-        return props.theme['base-text'];
-      case 'purple':
-        return props.theme['purple-dark'];
-      default:
-        return props.theme['white'];
-    }
-  }}
-}
+  }
 `

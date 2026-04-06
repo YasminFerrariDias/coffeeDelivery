@@ -41,10 +41,10 @@ export function App() {
       </div>
 
       <div className="Advantages">
-        <Advantages icon='ShoppingCart' text='Compra simples e segura' IconVariant='yellow-dark' variant={'text-m'} color={'base-text'} />
-        <Advantages icon='Clock' text='Entrega rápida e rastreada' IconVariant='yellow' variant={'text-m'} color={'base-text'} />
-        <Advantages icon='Box' text='Embalagem mantém o café intacto' IconVariant='gray' variant={'text-m'} color={'base-text'} />
-        <Advantages icon='Coffee' text='O café chega fresquinho até você' IconVariant='purple' variant={'text-m'} color={'base-text'}/>
+        <Advantages icon='ShoppingCart' text='Compra simples e segura' variant={'text-m'} color={'base-text'} IconColor='yellow-dark'/>
+        <Advantages icon='Clock' text='Entrega rápida e rastreada' variant={'text-m'} color={'base-text'} IconColor='yellow' />
+        <Advantages icon='Box' text='Embalagem mantém o café intacto' variant={'text-m'} color={'base-text'} IconColor='base-text' />
+        <Advantages icon='Coffee' text='O café chega fresquinho até você' variant={'text-m'} color={'base-text'} IconColor='purple-dark' />
       </div>
 
       <GlobalStyle />
