@@ -12,7 +12,7 @@ interface TitleProps {
 
 export function Title({ variant, text }: TitleProps) {
   return (
-    <TitleContainer variant={variant} className={variant}>
+    <TitleContainer className={variant}>
       {text && <span>{text}</span>}
     </TitleContainer>
   )

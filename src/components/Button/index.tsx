@@ -15,7 +15,7 @@ export function Button({ icon, text, variant, className }: ButtonProps) {
   }[icon]
 
   return (
-    <ButtonContainer variant={variant} className={className}>
+    <ButtonContainer $variant={variant} className={className}>
       <Icon size={22} />
       {text && <span>{text}</span>}
     </ButtonContainer>

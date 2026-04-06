@@ -4,6 +4,7 @@ import { defaultTheme } from './styles/themes/default'
 import { Button } from './components/Button'
 import { Title } from './components/Title'
 import { Text } from './components/Text'
+import { Advantages } from './components/Advantages'
 
 export function App() {
   return (
@@ -37,6 +38,13 @@ export function App() {
       <div className='Button'>
         <Button icon='MapPin' text='Porto Alegre, RS' variant='purple' className='text-s' />
         <Button icon='ShoppingCart' variant='yellow' />
+      </div>
+
+      <div className="Advantages">
+        <Advantages icon='ShoppingCart' text='Compra simples e segura' variant='yellow-dark'/>
+        <Advantages icon='Clock' text='Entrega rápida e rastreada' variant='yellow'/>
+        <Advantages icon='Box' text='Embalagem mantém o café intacto' variant='gray'/>
+        <Advantages icon='Coffee' text='O café chega fresquinho até você' variant='purple'/>
       </div>
 
       <GlobalStyle />

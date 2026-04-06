@@ -13,7 +13,7 @@ interface TextProps {
 
 export function Text({ variant, text }: TextProps) {
   return (
-    <TextContainer variant={variant} className={variant}>
+    <TextContainer className={variant}>
       {text && <span>{text}</span>}
     </TextContainer>
   )
