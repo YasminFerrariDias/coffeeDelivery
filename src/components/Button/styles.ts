@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import type { DefaultTheme } from "styled-components/dist/types";
 
 interface ButtonContainerProps {
-  $colorVariant: 'purple' | 'yellow'
+  $ColorVariant: keyof DefaultTheme
+  $ColorIcon: keyof DefaultTheme
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
@@ -16,13 +18,6 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   padding: 0.5rem;
   border: none;
 
-  background: ${(props) =>
-    props.$colorVariant === 'yellow'
-      ? props.theme['yellow-light']
-      : props.theme['purple-light']};
-
-  color: ${(props) =>
-    props.$colorVariant === 'yellow'
-      ? props.theme['yellow-dark']
-      : props.theme['purple']};
+  background: ${(props) => props.theme[props.$ColorVariant]};
+  color: ${(props) => props.theme[props.$ColorIcon]}
 `;
