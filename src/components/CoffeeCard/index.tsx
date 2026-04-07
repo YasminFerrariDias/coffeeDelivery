@@ -52,6 +52,7 @@ export function CoffeeCard({ img, $BackgroundColor, $colorBackground, color, tex
   return (
     <CoffeeCardContainer $BackgroundColor={$BackgroundColor}>
       <img src={Img}  />
+      {/* não devo colocar as informações direto no componente */}
       <span className="tags">
         <Tag BackgroundColor={$colorBackground} color={color} text={text} variant={variant} />
       </span>
