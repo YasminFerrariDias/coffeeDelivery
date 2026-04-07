@@ -1,6 +1,6 @@
 import type { DefaultTheme } from "styled-components/dist/types";
 import { Tag } from "../Tag";
-import { CoffeeCardContainer } from "./styles";
+import { AddCart, CoffeeCardContainer } from "./styles";
 import { Title } from "../Title";
 import { Text } from "../Text";
 import { Price } from "../Price";
@@ -25,18 +25,18 @@ import Mochaccino from '../../assets/img/Type=Mochaccino.svg';
 interface CoffeeCardProps {
   $colorBackground: keyof DefaultTheme,
   img: 'Americano'
-  | 'Arabe' 
-  | 'CafeComLeite' 
+  | 'Arabe'
+  | 'CafeComLeite'
   | 'CafeGelado'
   | 'Capuccino'
   | 'ChocolateQuente'
   | 'Cubano'
-  | 'ExpressoCremoso' 
-  | 'Expresso' 
-  | 'Havaiano'             
-  | 'Irlandes' 
-  | 'Latte' 
-  | 'Macchiato' 
+  | 'ExpressoCremoso'
+  | 'Expresso'
+  | 'Havaiano'
+  | 'Irlandes'
+  | 'Latte'
+  | 'Macchiato'
   | 'Mochaccino'
 }
 
@@ -47,15 +47,19 @@ export function CoffeeCard({ img, $colorBackground }: CoffeeCardProps) {
 
   return (
     <CoffeeCardContainer $colorBackground={$colorBackground} >
-      <img src={Img}/>
+      <img src={Img}  />
       {/* não devo colocar as informações direto no componente */}
-      <Tag BackgroundColor="yellow-light" color="yellow" text="TRADICIONAL" variant="tag"/>
-      <Title color="base-subtitle" text="Expresso Tradicional" variant="title-s" />
-      <Text text="O tradicional café feito com água quente e grãos moídos" color="base-label" variant="text-s" />
+      <span className="tags">
+        <Tag className="tag" BackgroundColor="yellow-light" color="yellow" text="TRADICIONAL" variant="tag" />
+      </span>
+      <span className="title"><Title color="base-subtitle" text="Expresso Tradicional" variant="title-s" /></span>
+      <span className="text"><Text text="O tradicional café feito com água quente e grãos moídos" color="base-label" variant="text-s" /></span>
       <footer>
-        <Price price="9,90"/>
-        <Count />
-        <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" variant="tag" color="white" text=""/>
+        <Price price="9,90" />
+        <AddCart>
+          <Count />
+          <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" variant="tag" color="white" text="" />
+        </AddCart>
       </footer>
     </CoffeeCardContainer>
   )
