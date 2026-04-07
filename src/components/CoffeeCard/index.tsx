@@ -2,18 +2,61 @@ import type { DefaultTheme } from "styled-components/dist/types";
 import { Tag } from "../Tag";
 import { CoffeeCardContainer } from "./styles";
 import { Title } from "../Title";
+import { Text } from "../Text";
+import { Price } from "../Price";
+import { Count } from "../Count";
+import { Button } from "../Button";
+
+import Americano from '../../assets/img/Type=Americano.svg';
+import Arabe from '../../assets/img/Type=Árabe.svg';
+import CafeComLeite from '../../assets/img/Type=CafécomLeite.svg';
+import CafeGelado from '../../assets/img/Type=CaféGelado.svg';
+import Capuccino from '../../assets/img/Type=Capuccino.svg';
+import ChocolateQuente from '../../assets/img/Type=ChocolateQuente.svg';
+import Cubano from '../../assets/img/Type=Cubano.svg';
+import ExpressoCremoso from '../../assets/img/Type=ExpressoCremoso.svg';
+import Expresso from '../../assets/img/Type=Expresso.svg';
+import Havaiano from '../../assets/img/Type=Havaiano.svg';
+import Irlandes from '../../assets/img/Type=Irlandês.svg';
+import Latte from '../../assets/img/Type=Latte.svg';
+import Macchiato from '../../assets/img/Type=Macchiato.svg';
+import Mochaccino from '../../assets/img/Type=Mochaccino.svg';
 
 interface CoffeeCardProps {
-  colorBackground: keyof DefaultTheme
+  $colorBackground: keyof DefaultTheme,
+  img: 'Americano'
+  | 'Arabe' 
+  | 'CafeComLeite' 
+  | 'CafeGelado'
+  | 'Capuccino'
+  | 'ChocolateQuente'
+  | 'Cubano'
+  | 'ExpressoCremoso' 
+  | 'Expresso' 
+  | 'Havaiano'             
+  | 'Irlandes' 
+  | 'Latte' 
+  | 'Macchiato' 
+  | 'Mochaccino'
 }
 
-export function CoffeeCard({ colorBackground }: CoffeeCardProps) {
+export function CoffeeCard({ img, $colorBackground }: CoffeeCardProps) {
+  const Img = {
+    Americano, Arabe, CafeComLeite, CafeGelado, Capuccino, ChocolateQuente, Cubano, ExpressoCremoso, Expresso, Havaiano, Irlandes, Latte, Macchiato, Mochaccino,
+  }[img]
+
   return (
-    <CoffeeCardContainer colorBackground={colorBackground}>
-      <img src="" alt="" />
+    <CoffeeCardContainer $colorBackground={$colorBackground} >
+      <img src={Img}/>
       {/* não devo colocar as informações direto no componente */}
       <Tag BackgroundColor="yellow-light" color="yellow" text="TRADICIONAL" variant="tag"/>
       <Title color="base-subtitle" text="Expresso Tradicional" variant="title-s" />
+      <Text text="O tradicional café feito com água quente e grãos moídos" color="base-label" variant="text-s" />
+      <footer>
+        <Price price="9,90"/>
+        <Count />
+        <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" variant="tag" color="white" text=""/>
+      </footer>
     </CoffeeCardContainer>
   )
 }

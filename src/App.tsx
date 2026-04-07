@@ -1,19 +1,19 @@
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
-import { Button } from './components/Button'
+{/*import { Button } from './components/Button'
 import { Title } from './components/Title'
 import { Text } from './components/Text'
 import { Advantages } from './components/Advantages'
 import { Tag } from './components/Tag'
 import { Count } from './components/Count'
-import { Price } from './components/Price'
+import { Price } from './components/Price'*/}
 import { CoffeeCard } from './components/CoffeeCard'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <div className='Title'>
+      {/*<div className='Title'>
         <Title variant='title-xl' text='Título XL' color='base-text' />
         <br />
         <Title variant='title-l' text='Título L' color='base-subtitle' />
@@ -61,10 +61,10 @@ export function App() {
 
       <div className="Price">
         <Price price='9,90' />
-      </div>
+      </div>*/}
 
       <div className="CoffeeCard">
-        <CoffeeCard colorBackground='base-card'/>
+        <CoffeeCard img='Expresso' $colorBackground='base-card' />
       </div>
 
       <GlobalStyle />
