@@ -7,8 +7,10 @@ import { Text } from './components/Text'
 import { Advantages } from './components/Advantages'
 import { Tag } from './components/Tag'
 import { Count } from './components/Count'
+import { Card } from './components/Card'
 import { Price } from './components/Price'*/}
 import { CoffeeCard } from './components/CoffeeCard'
+
 
 export function App() {
   return (
@@ -61,10 +63,17 @@ export function App() {
 
       <div className="Price">
         <Price price='9,90' />
+      </div>
+
+      <div className='Card'>
+        <Card variant='smallRounded'/>
+        <Card variant='mediumArounded'/>
+        <Card variant='smallSquare'/>
+        <Card variant='mediumSquare'/>
       </div>*/}
 
       <div className="CoffeeCard">
-        <CoffeeCard img='Expresso' $BackgroundColor='base-card' $colorBackground='yellow-light' color='yellow' text='TRADICIONAL' variant='tag' />
+        <CoffeeCard img='Expresso' $BackgroundColor='base-card' $colorBackground='yellow-light' color='yellow' tagValue={['TRADICIONAL']} variant='tag' />
       </div>
 
       <GlobalStyle />
