@@ -64,7 +64,7 @@ export function App() {
       </div>*/}
 
       <div className="CoffeeCard">
-        <CoffeeCard img='Expresso' $colorBackground='base-card' />
+        <CoffeeCard img='Expresso' $BackgroundColor='base-card' $colorBackground='yellow-light' color='yellow' text='TRADICIONAL' variant='tag' />
       </div>
 
       <GlobalStyle />
