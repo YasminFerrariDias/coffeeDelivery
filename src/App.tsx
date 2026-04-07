@@ -64,7 +64,7 @@ export function App() {
       </div>
 
       <div className="CoffeeCard">
-        <CoffeeCard />
+        <CoffeeCard colorBackground='base-card'/>
       </div>
 
       <GlobalStyle />
