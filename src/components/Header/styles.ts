@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   background: ${(props) => props.theme['background']};
   height: 6.5rem;
-  width: auto;
-  
+  width: 100%;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   gap: 83rem;
 
   img {
@@ -19,4 +22,4 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap: 0.75rem;
   }
-`
+`;
