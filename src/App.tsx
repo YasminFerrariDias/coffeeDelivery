@@ -8,10 +8,9 @@ import { Advantages } from './components/Advantages'
 import { Tag } from './components/Tag'
 import { Count } from './components/Count'
 import { Card } from './components/Card'
-import { Price } from './components/Price'*/}
+import { Number } from './components/Number'*/}
 import { CoffeeCard } from './components/CoffeeCard'
-import { Number } from './components/Number'
-
+import { Price } from './components/Price'
 
 export function App() {
   return (
@@ -62,22 +61,24 @@ export function App() {
         <Count />
       </div>
 
-      <div className="Price">
-        <Price price='9,90' />
-      </div>
+      
 
       <div className='Card'>
         <Card variant='smallRounded'/>
         <Card variant='mediumArounded'/>
         <Card variant='smallSquare'/>
         <Card variant='mediumSquare'/>
-      </div>*/}
+      </div>
 
-      <div>
+      <div className='Numer'>
         <Number $variantText='title-m' $number={90} variantColor='base-subtitle' />
         <Number $variantText='text-l-bold' $number={90} variantColor='base-text' />
         <Number $variantText='text-m-bold' $number={90} variantColor='base-title' />
         <Number $variantText='text-m'$number={90}  variantColor='base-text'/>
+      </div>*/}
+
+      <div className="Price">
+        <Price $number={9.90} />
       </div>
 
       <div className="CoffeeCard">

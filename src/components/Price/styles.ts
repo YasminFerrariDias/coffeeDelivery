@@ -11,7 +11,7 @@ export const Text = styled.span`
   margin: 0;           
 `;
 
-export const Title = styled.h2`
+export const number = styled.span`
   line-height: 1;
   margin: 0;
 `;

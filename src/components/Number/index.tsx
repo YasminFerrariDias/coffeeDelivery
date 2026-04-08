@@ -15,7 +15,7 @@ interface NumberProps {
 
 export function Number({ $variantText, variantColor, $number }: NumberProps) {
   return (
-    <NumberContainer $variantText={$variantText} variantColor={variantColor} $number={$number}>
+    <NumberContainer $variantText={$variantText} variantColor={variantColor} $number={$number} className="number" >
       {$number && <span>{$number}</span>}
     </NumberContainer>
   )

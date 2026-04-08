@@ -1,16 +1,16 @@
+import { Number } from '../Number'
 import { Text } from '../Text'
-import { Title } from '../Title'
 import { PriceContainer } from './styles'
 
 interface PriceProps{
-  price: string
+  $number: number
 }
 
-export function Price({ price }: PriceProps) {
+export function Price({ $number }: PriceProps) {
   return (
     <PriceContainer>
       <Text color='base-text' variant='text-s' text='R$' />
-      <Title color='base-text' text={price} variant='title-m'/>
+      <Number $variantText='title-m' $number={$number} variantColor='base-text' />
     </PriceContainer>
   )
 }
