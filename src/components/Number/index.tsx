@@ -1,18 +1,21 @@
 import { NumberContainer } from "./styles"
 
 interface NumberProps {
-  $variant:
+  $variantText:
   | 'title-m'
   | 'text-l-bold'
   | 'text-m'
   | 'text-m-bold'
-  className?: string
+  variantColor:
+  | 'base-title'
+  | 'base-subtitle'
+  | 'base-text'
   $number: number
 }
 
-export function Number({ $variant, $number }: NumberProps) {
+export function Number({ $variantText, variantColor, $number }: NumberProps) {
   return (
-    <NumberContainer $variant={$variant} $number={$number}>
+    <NumberContainer $variantText={$variantText} variantColor={variantColor} $number={$number}>
       {$number && <span>{$number}</span>}
     </NumberContainer>
   )

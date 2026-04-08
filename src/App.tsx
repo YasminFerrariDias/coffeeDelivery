@@ -74,10 +74,10 @@ export function App() {
       </div>*/}
 
       <div>
-        <Number $variant='title-m' $number={90}/>
-        <Number $variant='text-l-bold' $number={90} />
-        <Number $variant='text-m-bold' $number={90} />
-        <Number $variant='text-m'$number={90} />
+        <Number $variantText='title-m' $number={90} variantColor='base-subtitle' />
+        <Number $variantText='text-l-bold' $number={90} variantColor='base-text' />
+        <Number $variantText='text-m-bold' $number={90} variantColor='base-title' />
+        <Number $variantText='text-m'$number={90}  variantColor='base-text'/>
       </div>
 
       <div className="CoffeeCard">

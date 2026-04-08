@@ -1,17 +1,23 @@
 import styled from "styled-components";
 
 interface NumberContainerProps {
-  $variant:
+  $variantText:
   | 'title-m'
   | 'text-l-bold'
   | 'text-m'
   | 'text-m-bold'
+  variantColor:
+  | 'base-title'
+  | 'base-subtitle'
+  | 'base-text'
   className?: string
   $number: number
 }
 
 export const NumberContainer = styled.div.attrs<NumberContainerProps>(
-  ({ $variant }) => ({
-    className: $variant,
+  ({ $variantText }) => ({
+    className: $variantText,
   }),
-)<NumberContainerProps>``;
+) <NumberContainerProps>`
+  color: ${(props) => props.theme[props.variantColor]};
+`;
