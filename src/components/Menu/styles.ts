@@ -14,7 +14,7 @@ export const Text = styled.div`
 export const MenuCoffee = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 
   align-items: center;
   justify-items: center;
