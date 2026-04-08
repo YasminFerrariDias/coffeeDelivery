@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CoffeeCardContainer = styled.div`
-  margin: 1rem;
+  margin: 0.5rem;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -39,13 +39,13 @@ export const CoffeeCardContainer = styled.div`
     margin-top: auto; 
     padding: 1rem;
     width: 80%;
+    gap: 1rem;
   }
 `;
 
 export const AddCart = styled.div`
   display: flex;
   gap: 0.5rem;
-
 `;
 
 

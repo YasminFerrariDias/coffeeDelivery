@@ -23,11 +23,19 @@ import Mochaccino from '../../assets/img/Type=Mochaccino.svg';
 import { Card } from "../Card";
 import { Tag } from "../Tag";
 
+type TagOption = 
+    | 'TRADICIONAL'
+    | 'COM LEITE'
+    | 'GELADO'
+    | 'ESPECIAL'
+    | 'ALCOÓLICO'
+
 interface CoffeeCardProps {
   $colorBackground: keyof DefaultTheme,
   color: keyof DefaultTheme
-  tagValue: string[]
+  tagValue: TagOption[]
   variant: "tag"
+  text: string
   img: 'Americano'
   | 'Arabe'
   | 'CafeComLeite'
@@ -44,7 +52,7 @@ interface CoffeeCardProps {
   | 'Mochaccino'
 }
 
-export function CoffeeCard({ img, $colorBackground, color, variant, tagValue }: CoffeeCardProps) {
+export function CoffeeCard({ img, tagValue, text }: CoffeeCardProps) {
   const Img = {
     Americano, Arabe, CafeComLeite, CafeGelado, Capuccino, ChocolateQuente, Cubano, ExpressoCremoso, Expresso, Havaiano, Irlandes, Latte, Macchiato, Mochaccino,
   }[img]
@@ -55,13 +63,13 @@ export function CoffeeCard({ img, $colorBackground, color, variant, tagValue }: 
         <img src={Img} />
         <span className="tags">
           {
-            tagValue.map((value: string) => (
-              <Tag BackgroundColor="yellow-light" color="yellow"/>
+            tagValue.map((value) => (
+              <Tag BackgroundColor="yellow-light" tagValue={value} color="yellow" variant="tag" />
             ))
           }
-          {/* <Tag BackgroundColor={$colorBackground} color={color} text={tagValue} variant={variant} /> */}
+
         </span>
-        <span className="title"><Title color="base-subtitle" text="Expresso Tradicional" variant="title-s" /></span>
+        <span className="title"><Title color="base-subtitle" text={text} variant="title-s" /></span>
         <span className="text"><Text text="O tradicional café feito com água quente e grãos moídos" color="base-label" variant="text-s" /></span>
         <footer>
           <Price price="9,90" />

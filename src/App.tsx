@@ -73,7 +73,7 @@ export function App() {
       </div>*/}
 
       <div className="CoffeeCard">
-        <CoffeeCard img='Expresso' $colorBackground='yellow-light' color='yellow' tagValue={['TRADICIONAL']} variant='tag' />
+        <CoffeeCard img='Expresso' text='Café com Leite' $colorBackground='yellow-light' color='yellow' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} variant='tag' />
       </div>
 
       <GlobalStyle />
