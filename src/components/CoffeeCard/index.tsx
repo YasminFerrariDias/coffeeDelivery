@@ -1,4 +1,3 @@
-import type { DefaultTheme } from "styled-components/dist/types";
 import { AddCart, CoffeeCardContainer } from "./styles";
 import { Title } from "../Title";
 import { Text } from "../Text";
@@ -23,18 +22,15 @@ import Mochaccino from '../../assets/img/Type=Mochaccino.svg';
 import { Card } from "../Card";
 import { Tag } from "../Tag";
 
-type TagOption = 
-    | 'TRADICIONAL'
-    | 'COM LEITE'
-    | 'GELADO'
-    | 'ESPECIAL'
-    | 'ALCOÓLICO'
+type TagOption =
+  | 'TRADICIONAL'
+  | 'COM LEITE'
+  | 'GELADO'
+  | 'ESPECIAL'
+  | 'ALCOÓLICO'
 
 interface CoffeeCardProps {
-  $colorBackground: keyof DefaultTheme,
-  color: keyof DefaultTheme
   tagValue: TagOption[]
-  variant: "tag"
   text: string
   img: 'Americano'
   | 'Arabe'
