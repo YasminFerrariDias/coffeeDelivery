@@ -73,7 +73,7 @@ export function App() {
       </div>*/}
 
       <div className="CoffeeCard">
-        <CoffeeCard img='Expresso' text='Café com Leite' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} />
+        <CoffeeCard img='Expresso' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} textTitle='Café com Leite' text='O tradicional café feito com água quente e grãos moídos' />
       </div>
 
       <GlobalStyle />

@@ -32,6 +32,7 @@ type TagOption =
 interface CoffeeCardProps {
   tagValue: TagOption[]
   text: string
+  textTitle: string
   img: 'Americano'
   | 'Arabe'
   | 'CafeComLeite'
@@ -48,7 +49,7 @@ interface CoffeeCardProps {
   | 'Mochaccino'
 }
 
-export function CoffeeCard({ img, tagValue, text }: CoffeeCardProps) {
+export function CoffeeCard({ img, tagValue, textTitle, text }: CoffeeCardProps) {
   const Img = {
     Americano, Arabe, CafeComLeite, CafeGelado, Capuccino, ChocolateQuente, Cubano, ExpressoCremoso, Expresso, Havaiano, Irlandes, Latte, Macchiato, Mochaccino,
   }[img]
@@ -65,8 +66,8 @@ export function CoffeeCard({ img, tagValue, text }: CoffeeCardProps) {
           }
 
         </span>
-        <span className="title"><Title color="base-subtitle" text={text} variant="title-s" /></span>
-        <span className="text"><Text text="O tradicional café feito com água quente e grãos moídos" color="base-label" variant="text-s" /></span>
+        <span className="title"><Title text={textTitle} color="base-subtitle" variant="title-s" /></span>
+        <span className="text"><Text text={text} color="base-label" variant="text-s" /></span>
         <footer>
           <Price price="9,90" />
           <AddCart>
