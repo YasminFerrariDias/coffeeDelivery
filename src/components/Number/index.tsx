@@ -11,6 +11,7 @@ interface NumberProps {
   | 'base-subtitle'
   | 'base-text'
   $number: number
+  className?: string
 }
 
 export function Number({ $variantText, variantColor, $number }: NumberProps) {

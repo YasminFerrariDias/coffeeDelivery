@@ -1,6 +1,6 @@
 import { CountContainer, Operation, Result } from "./styles";
 import { Minus, Plus } from 'lucide-react';
-import { Text } from '../Text'
+import { Number } from "../Number";
 
 export function Count() {
   return (
@@ -10,7 +10,7 @@ export function Count() {
       </Operation>
 
       <Result>
-        <Text color="base-title" text="1" variant="text-m" />
+        <Number variantColor="base-title" $variantText="text-m" $number={1} className='number' />
       </Result>
 
       <Operation $color="purple">

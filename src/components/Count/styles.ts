@@ -1,7 +1,7 @@
 import type { DefaultTheme } from "styled-components/dist/types";
 import { styled } from 'styled-components';
 
-interface CountContainerProps{
+interface CountContainerProps {
   $color: keyof DefaultTheme
 }
 
@@ -24,6 +24,8 @@ export const Operation = styled.section<CountContainerProps>`
 `
 
 export const Result = styled.section`
-  display: flex;
-  flex-direction: row;
+  .number {
+    display: flex;
+    flex-direction: row;
+  }
 `
