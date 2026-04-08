@@ -2,7 +2,6 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
 import { Home } from './pages/Home'
-import { Header } from './components/Header'
 {/*import { Button } from './components/Button'
 import { Title } from './components/Title'
 import { Text } from './components/Text'
@@ -86,10 +85,6 @@ export function App() {
       <div className="CoffeeCard">
         <CoffeeCard price='90' img='Expresso' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} textTitle='Café com Leite' text='O tradicional café feito com água quente e grãos moídos' />
       </div>*/}
-
-      <div className="Header">
-        <Header />
-      </div>
 
       <div className="Home">
         <Home />
