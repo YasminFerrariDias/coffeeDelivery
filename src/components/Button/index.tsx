@@ -21,7 +21,13 @@ export function Button({ icon, ColorVariant, ColorIcon, variant, color, text }: 
   return (
     <ButtonContainer $ColorVariant={ColorVariant} $ColorIcon={ColorIcon}>
       <Icon size={22} />
-      <Text color={color} text={text} variant={variant}/>
+      {text && (
+        <Text
+          color={color}
+          text={text}
+          variant={variant}
+        />
+      )}
     </ButtonContainer>
   )
 }

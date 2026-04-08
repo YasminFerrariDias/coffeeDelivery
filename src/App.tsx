@@ -1,6 +1,8 @@
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
+import { Home } from './pages/Home'
+import { Header } from './components/Header'
 {/*import { Button } from './components/Button'
 import { Title } from './components/Title'
 import { Text } from './components/Text'
@@ -8,9 +10,9 @@ import { Advantages } from './components/Advantages'
 import { Tag } from './components/Tag'
 import { Count } from './components/Count'
 import { Card } from './components/Card'
-import { Number } from './components/Number'*/}
-import { CoffeeCard } from './components/CoffeeCard'
 import { Price } from './components/Price'
+import { Number } from './components/Number'
+import { CoffeeCard } from './components/CoffeeCard'*/}
 
 export function App() {
   return (
@@ -75,7 +77,7 @@ export function App() {
         <Number $variantText='text-l-bold' $number={90} variantColor='base-text' />
         <Number $variantText='text-m-bold' $number={90} variantColor='base-title' />
         <Number $variantText='text-m'$number={90}  variantColor='base-text'/>
-      </div>*/}
+      </div>
 
       <div className="Price">
         <Price $number={9.90} />
@@ -83,6 +85,14 @@ export function App() {
 
       <div className="CoffeeCard">
         <CoffeeCard price='90' img='Expresso' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} textTitle='Café com Leite' text='O tradicional café feito com água quente e grãos moídos' />
+      </div>*/}
+
+      <div className="Header">
+        <Header />
+      </div>
+
+      <div className="Home">
+        <Home />
       </div>
 
       <GlobalStyle />

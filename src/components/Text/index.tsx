@@ -2,7 +2,7 @@ import type { DefaultTheme } from "styled-components"
 import { TextContainer } from "./styles"
 
 interface TextProps {
-  variant: 
+  variant?: 
   | 'text-l'
   | 'text-l-bold'
   | 'text-m'
