@@ -33,7 +33,7 @@ interface CoffeeCardProps {
   tagValue: TagOption[]
   text: string
   textTitle: string
-  price: string
+  price: number
   img: 'Americano'
   | 'Arabe'
   | 'CafeComLeite'
@@ -50,7 +50,7 @@ interface CoffeeCardProps {
   | 'Mochaccino'
 }
 
-export function CoffeeCard({ img, tagValue, textTitle, text }: CoffeeCardProps) {
+export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCardProps) {
   const Img = {
     Americano, Arabe, CafeComLeite, CafeGelado, Capuccino, ChocolateQuente, Cubano, ExpressoCremoso, Expresso, Havaiano, Irlandes, Latte, Macchiato, Mochaccino,
   }[img]
@@ -70,7 +70,7 @@ export function CoffeeCard({ img, tagValue, textTitle, text }: CoffeeCardProps) 
         <span className="title"><Title text={textTitle} color="base-subtitle" variant="title-s" /></span>
         <span className="text"><Text text={text} color="base-label" variant="text-s" /></span>
         <footer>
-          <Price $number={9.90} />
+          <Price $number={price} />
           <AddCart>
             <Count />
             <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" variant="tag" color="white" text="" />

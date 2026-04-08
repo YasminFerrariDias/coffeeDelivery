@@ -9,7 +9,7 @@ export const CoffeeCardContainer = styled.div`
 
   img {
     margin-bottom: 0.7rem;
-    margin-top: -1rem;
+    margin-top: -1.5rem;
     width: 7.5rem;
     height: 7.5rem;
   } 
@@ -28,8 +28,9 @@ export const CoffeeCardContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 1rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   footer {
