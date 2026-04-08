@@ -10,6 +10,7 @@ import { Count } from './components/Count'
 import { Card } from './components/Card'
 import { Price } from './components/Price'*/}
 import { CoffeeCard } from './components/CoffeeCard'
+import { Number } from './components/Number'
 
 
 export function App() {
@@ -72,8 +73,15 @@ export function App() {
         <Card variant='mediumSquare'/>
       </div>*/}
 
+      <div>
+        <Number $variant='title-m' $number={90}/>
+        <Number $variant='text-l-bold' $number={90} />
+        <Number $variant='text-m-bold' $number={90} />
+        <Number $variant='text-m'$number={90} />
+      </div>
+
       <div className="CoffeeCard">
-        <CoffeeCard img='Expresso' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} textTitle='Café com Leite' text='O tradicional café feito com água quente e grãos moídos' />
+        <CoffeeCard price='90' img='Expresso' tagValue={['ESPECIAL', 'ALCOÓLICO', 'GELADO']} textTitle='Café com Leite' text='O tradicional café feito com água quente e grãos moídos' />
       </div>
 
       <GlobalStyle />
