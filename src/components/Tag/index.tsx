@@ -9,13 +9,13 @@ interface TagProps extends TextProps {
   BackgroundColor: keyof DefaultTheme
   className?: string
   tagValue: string
-  variant: "tag"
+  $variant: "tag"
 }
 
-export function Tag({ className, BackgroundColor, color, tagValue, variant }: TagProps) {
+export function Tag({ className, BackgroundColor, color, tagValue, $variant: variant }: TagProps) {
   return (
     <TagContainer $BackgroundColor={BackgroundColor} className={className}>
-      <Text color={color} text={tagValue} variant={variant} />
+      <Text color={color} text={tagValue} $variant={variant} />
     </TagContainer>
   )
 }

@@ -6,7 +6,7 @@ interface NumberProps {
   | 'text-l-bold'
   | 'text-m'
   | 'text-m-bold'
-  variantColor:
+  $variantColor:
   | 'base-title'
   | 'base-subtitle'
   | 'base-text'
@@ -14,9 +14,9 @@ interface NumberProps {
   className?: string
 }
 
-export function Number({ $variantText, variantColor, $number }: NumberProps) {
+export function Number({ $variantText, $variantColor, $number }: NumberProps) {
   return (
-    <NumberContainer $variantText={$variantText} variantColor={variantColor} $number={$number} className="number" >
+    <NumberContainer $variantText={$variantText} variantColor={$variantColor} $number={$number} className="number" >
       {$number && <span>{$number}</span>}
     </NumberContainer>
   )

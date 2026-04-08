@@ -10,7 +10,7 @@ export function Count() {
       </Operation>
 
       <Result>
-        <Number variantColor="base-title" $variantText="text-m" $number={1} className='number' />
+        <Number $variantColor="base-title" $variantText="text-m" $number={1} className='number' />
       </Result>
 
       <Operation $color="purple">

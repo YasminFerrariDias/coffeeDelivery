@@ -9,8 +9,8 @@ interface PriceProps{
 export function Price({ $number }: PriceProps) {
   return (
     <PriceContainer>
-      <Text color='base-text' variant='text-s' text='R$' />
-      <Number $variantText='title-m' $number={$number} variantColor='base-text' />
+      <Text color='base-text' $variant='text-s' text='R$' />
+      <Number $variantText='title-m' $number={$number} $variantColor='base-text' />
     </PriceContainer>
   )
 }

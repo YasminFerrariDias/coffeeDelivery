@@ -6,7 +6,7 @@ export function Menu() {
   return (
     <MenuContainer>
       <Text>
-        <Title text="Nossos Cafés" variant="title-l" color="base-subtitle" />
+        <Title text="Nossos Cafés" $variant="title-l" $color="base-subtitle" />
       </Text>
 
       <MenuCoffee>

@@ -11,7 +11,7 @@ interface AdvantagesProps extends TextProps {
   IconColor: keyof DefaultTheme
 }
 
-export function Advantages({ icon, text, color, variant, IconColor }: AdvantagesProps) {
+export function Advantages({ icon, text, color, $variant: variant, IconColor }: AdvantagesProps) {
   const Icon = {
     ShoppingCart,
     Clock,
@@ -22,7 +22,7 @@ export function Advantages({ icon, text, color, variant, IconColor }: Advantages
   return (
     <AdvantagesContainer $IconColor={IconColor}>
       <span className='icon'><Icon size={20} /></span>
-      <Text text={text} color={color} variant={variant} />
+      <Text text={text} color={color} $variant={variant} />
     </AdvantagesContainer>
   )
 }

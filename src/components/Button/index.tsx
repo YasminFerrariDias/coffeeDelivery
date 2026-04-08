@@ -12,7 +12,7 @@ interface ButtonProps extends TextProps {
   ColorVariant: keyof DefaultTheme
 }
 
-export function Button({ icon, ColorVariant, ColorIcon, variant, color, text }: ButtonProps) {
+export function Button({ icon, ColorVariant, ColorIcon,  $variant, color, text }: ButtonProps) {
   const Icon = {
     ShoppingCart,
     MapPin,
@@ -25,7 +25,7 @@ export function Button({ icon, ColorVariant, ColorIcon, variant, color, text }: 
         <Text
           color={color}
           text={text}
-          variant={variant}
+          $variant={$variant}
         />
       )}
     </ButtonContainer>

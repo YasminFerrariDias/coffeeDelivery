@@ -62,18 +62,18 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
         <span className="tags">
           {
             tagValue.map((value) => (
-              <Tag BackgroundColor="yellow-light" tagValue={value} color="yellow" variant="tag" />
+              <Tag BackgroundColor="yellow-light" tagValue={value} color="yellow" $variant="tag" />
             ))
           }
 
         </span>
-        <span className="title"><Title text={textTitle} color="base-subtitle" variant="title-s" /></span>
-        <span className="text"><Text text={text} color="base-label" variant="text-s" /></span>
+        <span className="title"><Title text={textTitle} $color="base-subtitle" $variant="title-s" /></span>
+        <span className="text"><Text text={text} color="base-label" $variant="text-s" /></span>
         <footer>
           <Price $number={price} />
           <AddCart>
             <Count />
-            <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" variant="tag" color="white" text="" />
+            <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $variant="tag" color="white" text="" />
           </AddCart>
         </footer>
       </CoffeeCardContainer>
