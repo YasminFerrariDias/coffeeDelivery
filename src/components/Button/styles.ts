@@ -3,7 +3,6 @@ import type { DefaultTheme } from "styled-components/dist/types";
 
 interface ButtonContainerProps {
   $ColorVariant: keyof DefaultTheme
-  $ColorIcon: keyof DefaultTheme
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
@@ -19,6 +18,5 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   border: none;
 
   background: ${(props) => props.theme[props.$ColorVariant]};
-  color: ${(props) => props.theme[props.$ColorIcon]}
 `;
  
