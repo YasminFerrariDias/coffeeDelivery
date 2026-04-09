@@ -1,7 +1,8 @@
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
-import { AddressCard } from './components/AddressCard'
+import { PaymentCard } from './components/PaymentCard'
+
 {/*import { Home } from './pages/Home'*/ }
 
 export function App() {
@@ -9,8 +10,8 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       {/*<Home />*/}
 
-      <AddressCard />
-
+      <PaymentCard />
+      
       <GlobalStyle />
     </ThemeProvider>
   )
