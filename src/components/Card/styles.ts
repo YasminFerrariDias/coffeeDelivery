@@ -15,7 +15,7 @@ export const CardContainer = styled.div<CardContainerProps>`
         height: 19.375rem;
         border-radius: 0.5rem 3rem 0.5rem 3rem;
       `)
- 
+
       case 'mediumRounded':
         return (`
         width: 28rem;
@@ -41,5 +41,4 @@ export const CardContainer = styled.div<CardContainerProps>`
         return 'background: gray';
     }
   }}
-
 `;
