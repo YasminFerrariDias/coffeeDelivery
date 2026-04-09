@@ -10,7 +10,7 @@ interface NumberProps {
   | 'base-title'
   | 'base-subtitle'
   | 'base-text'
-  $number: number
+  $number: number | string
   className?: string
 }
 
