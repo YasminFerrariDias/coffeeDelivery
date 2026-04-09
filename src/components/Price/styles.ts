@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const PriceContainer = styled.div`
+interface PriceContainerProps {
+  $variant: 'smallPrice' | 'mediumPrice' | 'largePrice' | 'smallLargePrice' 
+}
+
+export const PriceContainer = styled.div<PriceContainerProps>`
   display: flex;      
   gap: 0.2rem;            
   align-items: baseline;

@@ -4,17 +4,40 @@ import { PriceContainer } from './styles'
 
 interface PriceProps {
   $number: number | string
+  $variant: 'smallPrice' | 'mediumPrice' | 'largePrice' | 'smallLargePrice'
 }
 
-export function Price({ $number }: PriceProps) {
+export function Price({ $number, $variant }: PriceProps) {
+  const formattedNumber = (typeof $number === 'number') ? $number.toFixed(2).replace('.', ',') : $number
 
-    const formattedNumber = (typeof $number === 'number') ? $number.toFixed(2).replace('.', ',') : $number
-    
+  if ($variant === 'smallLargePrice') {
     return (
-      
-      <PriceContainer>
+      <PriceContainer $variant={$variant}>
         <Text color='base-text' $variant='text-s' text='R$' />
         <Number $variantText='title-m' $number={formattedNumber} $variantColor='base-text' />
       </PriceContainer>
     )
-  } 
+  } else if ($variant === 'smallPrice') {
+    return (
+      <PriceContainer $variant={$variant}>
+        <Text color='base-text' $variant='text-m' text='R$' />
+        <Number $variantText='text-m' $number={formattedNumber} $variantColor='base-text' />
+      </PriceContainer>
+    )
+  } else if ($variant === 'mediumPrice') {
+    return (
+      <PriceContainer $variant={$variant}>
+        <Text color='base-text' $variant='text-m-bold' text='R$' />
+        <Number $variantText='text-m-bold' $number={formattedNumber} $variantColor='base-text' />
+      </PriceContainer>
+    )
+  } else if ($variant === 'largePrice') {
+    return (
+      <PriceContainer $variant={$variant}>
+        <Text color='base-subtitle' $variant='text-l-bold' text='R$' />
+        <Number $variantText='text-l-bold' $number={formattedNumber} $variantColor='base-subtitle' />
+      </PriceContainer>
+    )
+  }
+
+}

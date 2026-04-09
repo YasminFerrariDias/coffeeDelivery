@@ -71,7 +71,7 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
         <span className="title"><Title text={textTitle} $color="base-subtitle" $variant="title-s" /></span>
         <span className="text"><Text text={text} color="base-label" $variant="text-s" /></span>
         <footer>
-          <Price $number={price} />
+          <Price $number={price} $variant="smallLargePrice" />
           <AddCart>
             <Count />
             <Button icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $variant="tag" color="white" text="" />
