@@ -10,7 +10,7 @@ export const BannerContainer = styled.div`
   url(${banner});
 
   background-size: cover;
-  width: auto;
+  width: auto; 
   height: 34rem;
   display: flex;
   justify-content: center;

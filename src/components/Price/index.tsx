@@ -13,4 +13,4 @@ export function Price({ $number }: PriceProps) {
       <Number $variantText='title-m' $number={$number} $variantColor='base-text' />
     </PriceContainer>
   )
-}
+} 

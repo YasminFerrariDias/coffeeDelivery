@@ -14,10 +14,11 @@ interface TextProps {
   color: keyof DefaultTheme;
 }
 
-export function Text({ $variant: variant, text, color}: TextProps) {
+export function Text({ $variant: $variant, text, color}: TextProps) {
   return (
-    <TextContainer className={variant} $color={color}>
+    <TextContainer className={$variant} $color={color}>
       {text && <span>{text}</span>}
     </TextContainer>
   )
 }
+ 

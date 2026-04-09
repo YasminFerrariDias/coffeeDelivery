@@ -10,7 +10,7 @@ export const Text = styled.div`
   margin-bottom: 3.375rem;
   margin-top: 2rem;
 `;
-
+ 
 export const MenuCoffee = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

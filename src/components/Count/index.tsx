@@ -17,5 +17,5 @@ export function Count() {
         <Plus size={14} />
       </Operation>
     </CountContainer>
-  )
+  ) 
 }

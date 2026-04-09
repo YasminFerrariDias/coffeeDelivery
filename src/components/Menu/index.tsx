@@ -8,7 +8,7 @@ export function Menu() {
       <Text>
         <Title text="Nossos Cafés" $variant="title-l" $color="base-subtitle" />
       </Text>
-
+ 
       <MenuCoffee>
         <CoffeeCard img="Expresso" tagValue={["TRADICIONAL"]} textTitle="Expresso Tradicional" text="O tradicional café feito com água quente e grãos moídos" price={9.90} />
         <CoffeeCard img="Americano" tagValue={["TRADICIONAL"]} textTitle="Expresso Americano" text="Expresso diluído, menos intenso que o tradicional" price={9.90} />

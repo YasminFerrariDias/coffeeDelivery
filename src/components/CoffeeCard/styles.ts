@@ -29,7 +29,7 @@ export const CoffeeCardContainer = styled.div`
     justify-content: center;
     text-align: center;
     margin: 0.5rem;
-  }
+  } 
 
   footer {
     display: flex;

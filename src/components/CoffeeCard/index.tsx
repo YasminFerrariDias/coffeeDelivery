@@ -4,6 +4,7 @@ import { Text } from "../Text";
 import { Price } from "../Price";
 import { Count } from "../Count";
 import { Button } from "../Button";
+import { nanoid } from 'nanoid';
 
 import Americano from '../../assets/img/Type=Americano.svg';
 import Arabe from '../../assets/img/Type=Árabe.svg';
@@ -56,13 +57,13 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
   }[img]
 
   return (
-    <Card variant="smallRounded"  >
+    <Card $variant="smallRounded"  >
       <CoffeeCardContainer>
         <img src={Img} />
         <span className="tags">
           {
             tagValue.map((value) => (
-              <Tag BackgroundColor="yellow-light" tagValue={value} color="yellow" $variant="tag" />
+              <Tag key={nanoid()} BackgroundColor="yellow-light" tagValue={value} color="yellow" $variant="tag" />
             ))
           }
 
@@ -79,4 +80,4 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
       </CoffeeCardContainer>
     </Card>
   )
-}
+} 

@@ -22,4 +22,4 @@ export const AdvantagesContainer = styled.span<AdvantagesContainerProps>`
     display: flex;
     flex-direction: column;
   }
-`
+` 

@@ -18,4 +18,4 @@ export function Tag({ className, BackgroundColor, color, tagValue, $variant: var
       <Text color={color} text={tagValue} $variant={variant} />
     </TagContainer>
   )
-}
+} 

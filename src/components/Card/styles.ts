@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 interface CardContainerProps {
-  variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare';
+  $variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare';
 }
 
 export const CardContainer = styled.div<CardContainerProps>`
   background-color: ${(props) => props.theme['base-card']};
 
-  ${({ variant }) => {
-    switch (variant) {
+  ${({ $variant }) => {
+    switch ($variant) {
       case 'smallRounded':
         return (`
         width: 16rem;
         height: 19.375rem;
         border-radius: 0.5rem 3rem 0.5rem 3rem;
       `)
-
+ 
       case 'mediumRounded':
         return (`
         width: 28rem;

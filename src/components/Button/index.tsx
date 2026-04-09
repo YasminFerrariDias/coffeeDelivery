@@ -10,7 +10,7 @@ interface ButtonProps extends TextProps {
   icon: 'ShoppingCart' | 'MapPin',
   ColorIcon: keyof DefaultTheme
   ColorVariant: keyof DefaultTheme
-}
+} 
 
 export function Button({ icon, ColorVariant, ColorIcon,  $variant, color, text }: ButtonProps) {
   const Icon = {

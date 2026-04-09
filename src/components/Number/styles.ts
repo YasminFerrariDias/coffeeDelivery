@@ -6,7 +6,7 @@ interface NumberContainerProps {
   | 'text-l-bold'
   | 'text-m'
   | 'text-m-bold'
-  variantColor:
+  $variantColor:
   | 'base-title'
   | 'base-subtitle'
   | 'base-text'
@@ -19,5 +19,6 @@ export const NumberContainer = styled.div.attrs<NumberContainerProps>(
     className: $variantText,
   }),
 ) <NumberContainerProps>`
-  color: ${(props) => props.theme[props.variantColor]};
+  color: ${(props) => props.theme[props.$variantColor]};
 `;
+ 

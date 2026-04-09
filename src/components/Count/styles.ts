@@ -15,7 +15,7 @@ export const CountContainer = styled.div<CountContainerProps>`
   gap: 0.6rem;
   background-color: ${(props) => props.theme[props.$color]};
   border-radius: 0.375rem;
-`
+` 
 
 export const Operation = styled.section<CountContainerProps>`
   display: flex;

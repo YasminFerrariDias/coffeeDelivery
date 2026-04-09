@@ -3,7 +3,7 @@ import { AdvantagesContainer } from './styles';
 import type { ComponentProps } from 'react';
 import { Text } from '../Text'
 import type { DefaultTheme } from 'styled-components/dist/types';
-
+ 
 type TextProps = ComponentProps<typeof Text>
 
 interface AdvantagesProps extends TextProps {
