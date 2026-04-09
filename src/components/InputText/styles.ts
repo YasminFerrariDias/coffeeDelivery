@@ -5,12 +5,13 @@ interface InputTextContainerProps {
 }
 
 export const InputTextContainer = styled.input<InputTextContainerProps>`
-  padding: 0.6rem;
+  padding-left: 0.5rem; 
   border: 1px solid ${(props) => props.theme['base-button']};
   background: ${(props) => props.theme['base-input']};
   color: ${(props) => props.theme['base-text']};
   border-radius: 0.25rem;
   outline: none;
+  height: 2.625rem; 
 
   &::placeholder {
     color: ${(props) => props.theme['base-label']};
@@ -24,32 +25,32 @@ export const InputTextContainer = styled.input<InputTextContainerProps>`
     switch ($variableSize) {
       case 'mini':
         return (`
-        width: 3.75rem;
+        width: 3rem;
       `)
 
       case 'small':
         return (`
-        width: 12.5rem;
+        width: 11.75rem;
       `)
 
       case 'medium':
         return (`
-        width: 17.25rem;
+        width: 16.5rem;
       `)
 
       case 'large':
         return (`
-        width: 21.75rem;
+        width: 21rem;
       `)
 
       case 'extraLarge':
         return (`
-        width: 35rem;
+        width: 34.25rem;
       `)
 
       default:
         return (`
-        width: 6rem;
+        width: 6 rem;
       `)
     }
   }}

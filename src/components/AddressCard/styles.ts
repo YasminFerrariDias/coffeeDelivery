@@ -1,0 +1,38 @@
+import styled from "styled-components";
+
+export const AddressCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+`;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 2.5rem 2rem 2.5rem;
+`;
+
+export const Form = styled.div`
+  width: 35rem;
+  height: 13.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 2.5rem;
+`;
+
+export const RowOne = styled.div`
+`;
+
+export const RowTwo = styled.div`
+`;
+
+export const RowThree = styled.div`
+  gap: 0.75rem;
+  display: flex;
+`;
+
+export const RowFour = styled.div`
+  gap: 0.75rem;
+  display: flex;
+`;
