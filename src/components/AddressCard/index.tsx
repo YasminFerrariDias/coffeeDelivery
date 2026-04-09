@@ -1,17 +1,23 @@
 import { Card } from "../Card";
+import { IconComponent } from "../IconComponent";
 import { InputText } from "../InputText";
 import { Text } from "../Text";
-import { AddressCardContainer, Description, Form, RowFour, RowOne, RowThree, RowTwo } from "./styles";
+import { Icon, AddressCardContainer, Description, Form, RowFour, RowOne, RowThree, RowTwo, Information } from "./styles";
 
 export function AddressCard() {
   return (
     <AddressCardContainer>
       <Card $variant="mediumSquare">
-        <Description>
-          <Text text="Endereço de Entrega" color="base-subtitle" $variant="text-m" />
-          <Text text="Informe o endereço onde deseja receber seu pedido" color="base-text" $variant="text-s" />
-        </Description>
-
+        <Information>
+          <Icon>
+            <IconComponent icon="MapPinned" ColorIcon="yellow" />
+          </Icon>
+          <Description>
+            <Text text="Endereço de Entrega" color="base-subtitle" $variant="text-m" />
+            <Text text="Informe o endereço onde deseja receber seu pedido" color="base-text" $variant="text-s" />
+          </Description>
+        </Information>
+        
         <Form>
           <RowOne>
             <InputText $variableSize="small" placeholder="CEP" />

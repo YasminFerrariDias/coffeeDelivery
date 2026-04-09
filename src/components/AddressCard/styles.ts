@@ -3,13 +3,23 @@ import styled from "styled-components";
 export const AddressCardContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
 
+export const Information = styled.div`
+  margin: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  gap: 0.5rem;
+`;
+
+export const Icon = styled.div`
+  flex-direction: column;
+  display: flex;
 `;
 
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 2.5rem 2.5rem 2rem 2.5rem;
+
 `;
 
 export const Form = styled.div`
