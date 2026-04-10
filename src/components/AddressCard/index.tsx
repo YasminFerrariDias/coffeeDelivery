@@ -10,7 +10,7 @@ export function AddressCard() {
       <Card $variant="mediumSquare">
         <Information>
           <Icon>
-            <IconComponent icon="MapPinned" ColorIcon="yellow" />
+            <IconComponent variantSize={22} icon="MapPinned" ColorIcon="yellow" />
           </Icon>
           <Description>
             <Text text="Endereço de Entrega" color="base-subtitle" $variant="text-m" />
