@@ -100,7 +100,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700;
   }
 
-  .button-m {
+  .button-s {
     font-family: 'Roboto', sans-serif;
     font-size: 0.75rem; /* 12px */
     line-height: 160%;

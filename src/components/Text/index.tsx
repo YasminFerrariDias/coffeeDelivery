@@ -10,6 +10,8 @@ interface TextProps {
   | 'text-s'
   | 'text-xs'
   | 'tag'
+  | 'button-g'
+  | 'button-s'
   text?: string,
   color: keyof DefaultTheme;
 }

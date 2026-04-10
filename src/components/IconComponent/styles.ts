@@ -6,5 +6,5 @@ interface IconComponentContainerProps{
 }
 
 export const IconComponentContainer  = styled.div<IconComponentContainerProps>`
-  color: ${(props) => props.theme[props.$ColorIcon]}
+  color: ${(props) => props.theme[props.$ColorIcon]};
 `
