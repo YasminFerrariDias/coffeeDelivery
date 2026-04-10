@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 83rem;
+  gap: 53rem;
 
   img {
     width: 5.309rem;

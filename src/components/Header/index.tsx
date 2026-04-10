@@ -7,8 +7,8 @@ export function Header() {
     <HeaderContainer>
       <img src={Logo} />
       <div>
-        <Button icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
-        <Button icon="ShoppingCart" ColorIcon="yellow-dark" ColorVariant="yellow-light" color="background" />
+        <Button variantSize={22} icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
+        <Button variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark" ColorVariant="yellow-light" color="background" />
       </div>
     </HeaderContainer>
   )
