@@ -1,10 +1,10 @@
-import { Card } from "../Card";
+import { CoffeeCartCard } from "../CoffeeCartCard";
 import { CartCardContainer } from "./styles";
 
 export function CartCard() {
   return (
     <CartCardContainer>
-      <Card $variant="mediumCart" > </Card>
+      <CoffeeCartCard img="ExpressoTradicional" text="Expresso Tradicional" number={9.90} />
     </CartCardContainer>
   )
 }
