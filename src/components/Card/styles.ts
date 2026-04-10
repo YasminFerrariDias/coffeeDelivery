@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface CardContainerProps {
-  $variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare';
+  $variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare' | 'mediumCart';
 }
 
 export const CardContainer = styled.div<CardContainerProps>`
@@ -35,6 +35,12 @@ export const CardContainer = styled.div<CardContainerProps>`
         width: 40rem;
         height: 23.25rem;
         border-radius: 0.5rem;
+      `)
+
+      case 'mediumCart':
+        return (`
+        width: 23rem;
+        height: 5rem;
       `)
 
       default:

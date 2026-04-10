@@ -4,7 +4,7 @@ import { CartCardContainer } from "./styles";
 export function CartCard() {
   return (
     <CartCardContainer>
-      <Card $variant="mediumRounded" > </Card>
+      <Card $variant="mediumCart" > </Card>
     </CartCardContainer>
   )
 }

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { CardContainer } from "./styles";
 
 interface CardProps {
-  $variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare';
+  $variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare' | 'mediumCart';
   children: ReactNode
   className?: string
 }
