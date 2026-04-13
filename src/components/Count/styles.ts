@@ -1,11 +1,6 @@
-import type { DefaultTheme } from "styled-components/dist/types";
 import { styled } from 'styled-components';
 
-interface CountContainerProps {
-  $color: keyof DefaultTheme
-}
-
-export const CountContainer = styled.div<CountContainerProps>`
+export const CountContainer = styled.div`
   display: flex;
   flex-direction: row;
   height: 2.375rem;
@@ -13,23 +8,15 @@ export const CountContainer = styled.div<CountContainerProps>`
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
-  background-color: ${(props) => props.theme[props.$color]};
+  background-color: ${(props) => props.theme['base-button']};
   border-radius: 0.375rem;
-` 
+`;
 
-export const Operation = styled.section<CountContainerProps>`
-  display: flex;
-  flex-direction: row;
-  color: ${(props) => props.theme[props.$color]};
-
-  &:hover {
-    color: ${(props) => props.theme['purple-dark']};
-  }
-`
+export const Operation = styled.section``;
 
 export const Result = styled.section`
   .number {
     display: flex;
     flex-direction: row;
   }
-`
+`;
