@@ -21,6 +21,10 @@ export const Operation = styled.section<CountContainerProps>`
   display: flex;
   flex-direction: row;
   color: ${(props) => props.theme[props.$color]};
+
+  &:hover {
+    color: ${(props) => props.theme['purple-dark']};
+  }
 `
 
 export const Result = styled.section`
