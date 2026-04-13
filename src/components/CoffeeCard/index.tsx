@@ -74,7 +74,7 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
           <Price $number={price} $variant="smallLargePrice" />
           <AddCart>
             <Count />
-            <Button variantSize={22} icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $variant="tag" color="white" text="" />
+            <Button variantSize={22} icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $variant="tag" color="white" text="" $ColorHover="purple" />
           </AddCart>
         </footer>
       </CoffeeCardContainer>
