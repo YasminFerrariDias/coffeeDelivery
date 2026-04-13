@@ -9,7 +9,7 @@ interface IconComponentProps {
   className?: string
 }
 
-export function IconComponent({ icon, ColorIcon, variantSize = 22 }: IconComponentProps) {
+export function IconComponent({ icon, className, ColorIcon, variantSize = 22 }: IconComponentProps) {
   const Icon = {
     ShoppingCart,
     MapPin,
@@ -23,7 +23,7 @@ export function IconComponent({ icon, ColorIcon, variantSize = 22 }: IconCompone
   }[icon]
 
   return (
-    <IconComponentContainer $ColorIcon={ColorIcon} >
+    <IconComponentContainer $ColorIcon={ColorIcon} className={className} >
       <Icon size={variantSize} />
     </IconComponentContainer>
   )

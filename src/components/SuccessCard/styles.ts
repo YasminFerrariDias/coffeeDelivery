@@ -12,14 +12,3 @@ export const SuccessCardContainer = styled.div`
     ) border-box;
   border-radius: 0.5rem 3rem;
 `;
-
-export const Icon = styled.div`
-  background-color: ${(props) => props.theme['purple']};
-  width: 2rem;
-  height: 2rem;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  border-radius: 100%;
-  line-height: 0;
-`;
