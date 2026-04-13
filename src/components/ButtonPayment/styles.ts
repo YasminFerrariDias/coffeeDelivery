@@ -1,8 +1,11 @@
 import styled from "styled-components"
 
-export const ButtonPaymentContainer = styled.button`
+interface ButtonPaymentContainerProps {
+  $selected?: boolean;
+}
+
+export const ButtonPaymentContainer = styled.button<ButtonPaymentContainerProps>`
   color: ${(props) => props.theme['base-text']};
-  background: ${(props) => props.theme['base-button']};
   border: none;
   height: 3.188rem;
   width: 11.167rem;
@@ -12,6 +15,21 @@ export const ButtonPaymentContainer = styled.button`
   justify-content: flex-start;
   gap: 0.5rem;
   padding: 0 1rem;
+
+  background-color: ${(props) =>
+    props.$selected ? props.theme['purple-light'] : props.theme['base-button']};
+
+  border: ${(props) =>
+    props.$selected
+      ? `0.063rem solid ${props.theme['purple']}`
+      : '0.063rem solid transparent'};
+
+  &:hover {
+    background: ${(props) => 
+      props.$selected
+        ? props.theme['purple-light']
+        : props.theme['base-hover']};
+  }
 
   svg {
     display: block;

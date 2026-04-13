@@ -7,11 +7,12 @@ interface ButtonPaymentProps extends Omit<IconComponentProps, 'ColorIcon'>  {
   variantText: 'CARTÃO DE CRÉDITO' | 'CARTÃO DE DÉBITO' | 'DINHEIRO'
   FontVariant?: 'button-s' | 'button-g'
   ColorIcon?: IconComponentProps['ColorIcon']
+  selected?: boolean
 }
 
-export function ButtonPayment({ variantText, FontVariant = 'button-s', icon }: ButtonPaymentProps) {
+export function ButtonPayment({ variantText, FontVariant = 'button-s', icon, selected = false }: ButtonPaymentProps) {
   return (
-    <ButtonPaymentContainer className={FontVariant}>
+    <ButtonPaymentContainer className={FontVariant} $selected={selected}>
       <IconComponent icon={icon} ColorIcon="purple" variantSize={16} />
       {variantText}
     </ButtonPaymentContainer>
