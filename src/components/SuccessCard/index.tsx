@@ -1,30 +1,36 @@
 import { IconBadge } from "../IconBadge";
 import { Text } from "../Text";
-import { SuccessCardContainer } from "./styles";
+import { Info, InfoItem, SuccessCardContainer, Delivery } from "./styles";
 
 export function SuccessCard() {
   return (
     <SuccessCardContainer>
-      <div>
+      <InfoItem>
         <IconBadge icon={"MapPin"} $BackgroundVariant="purple" />
-        <div>
+        <Info>
+          <Delivery>
           <Text text="Entrega em" color="base-text" $variant="text-m" />
           <Text text="Rua João Daniel Martinelli, 102" color="base-text" $variant="text-m-bold" />
-        </div>
+        </Delivery>
         <Text text="Farrapos - Porto Alegre, RS" color="base-text" $variant="text-m" />
-      </div>
+        </Info>
+      </InfoItem>
 
-      <div>
+      <InfoItem>
         <IconBadge icon={"Clock"} $BackgroundVariant="yellow" />
-        <Text text="Previsõa de entrega" color="base-text" $variant="text-m" />
-        <Text text="20 min - 30 min" color="base-text" $variant="text-m-bold" />
-      </div>
+        <Info>
+          <Text text="Previsõa de entrega" color="base-text" $variant="text-m" />
+          <Text text="20 min - 30 min" color="base-text" $variant="text-m-bold" />
+        </Info>
+      </InfoItem>
 
-      <div>
+      <InfoItem>
         <IconBadge icon={"DollarSign"} $BackgroundVariant="yellow-dark" />
+        <Info>
         <Text text="Pagamento na entrega" color="base-text" $variant="text-m" />
         <Text text="Cartão de Crédito" color="base-text" $variant="text-m-bold" />
-      </div>
+        </Info>
+      </InfoItem>
     </SuccessCardContainer>
   )
 }

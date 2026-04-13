@@ -12,3 +12,21 @@ export const SuccessCardContainer = styled.div`
     ) border-box;
   border-radius: 0.5rem 3rem;
 `;
+
+export const InfoItem = styled.div`
+  display: flex;
+  margin: 2.25rem;
+  align-items: center;
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.75rem;
+`;
+
+export const Delivery = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+`;
