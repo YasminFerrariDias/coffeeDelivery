@@ -33,7 +33,7 @@ export function CoffeeCartCard({ text, number, img, }: CoffeeCartCardProps) {
             <Text text={text} color="base-subtitle" $variant="text-m" />
             <Buttons>
               <Count />
-              <Button icon="Trash2" text='REMOVER' ColorIcon="purple" variantSize={16} $variant="button-s" color="base-text" ColorVariant="base-button" />
+              <Button icon="Trash2" text='REMOVER' ColorIcon="purple" variantSize={16} $variant="button-s" color="base-text" ColorVariant="base-button" $ColorHover='base-hover' />
             </Buttons>
           </Info>
         </Cart>

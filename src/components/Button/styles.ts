@@ -3,9 +3,11 @@ import type { DefaultTheme } from "styled-components/dist/types";
 
 interface ButtonContainerProps {
   $ColorVariant: keyof DefaultTheme
+  $ColorHover?: keyof DefaultTheme
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
+  background: ${(props) => props.theme[props.$ColorVariant]};
   height: 2.375rem;
   min-width: 2.375rem;
   width: auto;
@@ -16,7 +18,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   gap: 0.25rem;
   padding: 0.5rem;
   border: none;
+  transition: 0.2s;
 
-  background: ${(props) => props.theme[props.$ColorVariant]};
+  &:hover{
+    background: ${(props) => props.theme[props.$ColorHover || props.$ColorVariant]};
+  }
 `;
- 

@@ -10,11 +10,12 @@ type IconProps = ComponentProps<typeof IconComponent>
 interface ButtonProps extends TextProps, IconProps {
   ColorVariant: keyof DefaultTheme
   children?: React.ReactNode
+  $ColorHover?: keyof DefaultTheme
 }
 
-export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children }: ButtonProps) {
+export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children, $ColorHover }: ButtonProps) {
   return (
-    <ButtonContainer $ColorVariant={ColorVariant}>
+    <ButtonContainer $ColorVariant={ColorVariant} $ColorHover={$ColorHover}>
       <IconComponent icon={icon} ColorIcon={ColorIcon} variantSize={variantSize}/>
       {text && (
         <Text
