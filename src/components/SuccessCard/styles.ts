@@ -1,21 +1,27 @@
 import styled from "styled-components";
 
 export const SuccessCardContainer = styled.div`
-  width: 32.875rem;
-  height: 16.875rem;
+  background-color: ${(props) => props.theme['base-card']};
+  max-width: 32.875rem;
+  max-height: 16.875rem;
   border: 1px solid transparent;
-  background: linear-gradient(white, white) padding-box,
+  background: 
+     linear-gradient(${(props) => props.theme['background']}, ${(props) => props.theme['background']}) padding-box,
+    linear-gradient(white, white) padding-box,
     linear-gradient(
       90deg,
       ${(props) => props.theme['yellow']},
       ${(props) => props.theme['purple']}
     ) border-box;
   border-radius: 0.5rem 3rem;
+  padding: 2.5rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const InfoItem = styled.div`
   display: flex;
-  margin: 2.25rem;
   align-items: center;
 `;
 
