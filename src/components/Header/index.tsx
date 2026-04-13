@@ -7,7 +7,9 @@ import { Link } from "react-router";
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={Logo} />
+      <Link to="/">
+        <img src={Logo} />
+      </Link>
       <div>
         <Button variantSize={22} icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
         <Link to="/payment">
