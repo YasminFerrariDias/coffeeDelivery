@@ -1,7 +1,7 @@
 import ExpressoTradicionalImg from '../../assets/img/Type=Expresso.svg'
 import LatteImg from '../../assets/img/Type=Latte.svg'
 
-import { Button } from '../Button'
+import { Button } from '../ButtonText'
 import { Card } from '../Card'
 import { Count } from '../Count'
 import { Price } from '../Price'

@@ -1,8 +1,7 @@
-import { Button } from "../Button";
+import { Button } from "../ButtonText";
 import { HeaderContainer } from "./styles";
 import Logo from '../../assets/logo/logo-coffeeDelivery.svg';
 import { Link } from "react-router";
-
 
 export function Header() {
   return (

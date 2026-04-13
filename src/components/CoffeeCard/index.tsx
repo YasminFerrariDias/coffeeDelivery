@@ -3,7 +3,7 @@ import { Title } from "../Title";
 import { Text } from "../Text";
 import { Price } from "../Price";
 import { Count } from "../Count";
-import { Button } from "../Button";
+import { Button } from "../ButtonText";
 import { nanoid } from 'nanoid';
 
 import Americano from '../../assets/img/Type=Americano.svg';
