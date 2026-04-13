@@ -1,4 +1,5 @@
-import { Button } from "../ButtonText";
+import { ButtonText } from "../ButtonText";
+import { Button } from "../Button";
 import { HeaderContainer } from "./styles";
 import Logo from '../../assets/logo/logo-coffeeDelivery.svg';
 import { Link } from "react-router";
@@ -10,9 +11,9 @@ export function Header() {
         <img src={Logo} />
       </Link>
       <div>
-        <Button variantSize={22} icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
+        <ButtonText variantSize={22} icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
         <Link to="/payment">
-          <Button variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark" ColorVariant="yellow-light" color="background"></Button>
+          <Button ColorVariant="yellow" variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark"></Button>
         </Link>
       </div>
     </HeaderContainer>

@@ -1,4 +1,4 @@
-import { ButtonContainer } from './styles';
+import { ButtonTextContainer } from './styles';
 import type { ComponentProps } from 'react';
 import { Text } from '../Text'
 import type { DefaultTheme } from 'styled-components/dist/types';
@@ -13,9 +13,9 @@ interface ButtonProps extends TextProps, IconProps {
   $ColorHover?: keyof DefaultTheme
 }
 
-export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children, $ColorHover }: ButtonProps) {
+export function ButtonText({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children, $ColorHover }: ButtonProps) {
   return (
-    <ButtonContainer $ColorVariant={ColorVariant} $ColorHover={$ColorHover}>
+    <ButtonTextContainer $ColorVariant={ColorVariant} $ColorHover={$ColorHover}>
       <IconComponent icon={icon} ColorIcon={ColorIcon} variantSize={variantSize}/>
       {text && (
         <Text
@@ -25,6 +25,6 @@ export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, v
         />
       )}
       {children}
-    </ButtonContainer>
+    </ButtonTextContainer>
   )
 }

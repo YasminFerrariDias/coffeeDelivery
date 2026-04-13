@@ -3,7 +3,7 @@ import { Title } from "../Title";
 import { Text } from "../Text";
 import { Price } from "../Price";
 import { Count } from "../Count";
-import { Button } from "../ButtonText";
+import { Button } from "../Button";
 import { nanoid } from 'nanoid';
 
 import Americano from '../../assets/img/Type=Americano.svg';
@@ -63,7 +63,8 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
         <span className="tags">
           {
             tagValue.map((value) => (
-              <Tag key={nanoid()} BackgroundColor="yellow-light" tagValue={value} color="yellow" $variant="tag" />
+              {/* VERIFICAR O QUE PRECISA FAZER */}
+              <Tag key={nanoid()} text={value} tagValue={value} color="yellow" $variant="tag" />
             ))
           }
 
@@ -74,7 +75,7 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
           <Price $number={price} $variant="smallLargePrice" />
           <AddCart>
             <Count />
-            <Button variantSize={22} icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $variant="tag" color="white" text="" $ColorHover="purple" />
+            <Button variantSize={22} icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $ColorHover="purple" />
           </AddCart>
         </footer>
       </CoffeeCardContainer>

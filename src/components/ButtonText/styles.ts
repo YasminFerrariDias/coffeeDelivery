@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import type { DefaultTheme } from "styled-components/dist/types";
 
-interface ButtonContainerProps {
+interface ButtonTextContainerProps {
   $ColorVariant: keyof DefaultTheme
   $ColorHover?: keyof DefaultTheme
 }
 
-export const ButtonContainer = styled.button<ButtonContainerProps>`
+export const ButtonTextContainer = styled.button<ButtonTextContainerProps>`
   background: ${(props) => props.theme[props.$ColorVariant]};
   height: 2.375rem;
   min-width: 2.375rem;
