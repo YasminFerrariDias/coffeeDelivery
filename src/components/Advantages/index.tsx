@@ -12,12 +12,11 @@ interface AdvantagesProps extends TextProps, IconProps {
   IconColor: keyof DefaultTheme
 }
 
-export function Advantages({ text, color, $variant: variant, IconColor, icon }: AdvantagesProps) {
-
+export function Advantages({ text, IconColor, icon }: AdvantagesProps) {
   return (
-    <AdvantagesContainer $IconColor={IconColor}>
+    <AdvantagesContainer>
       <IconBadge icon={icon} $BackgroundVariant={IconColor} />
-      <Text text={text} color={color} $variant={variant} />
+      <Text text={text} color={"base-text"} $variant={"text-m"} />
     </AdvantagesContainer>
   )
 }
