@@ -2,7 +2,7 @@ import { Card } from "../Card";
 import { CoffeeCartCard } from "../CoffeeCartCard";
 import { Price } from "../Price";
 import { Text } from "../Text";
-import { Button, CartCardContainer, Row, Separate, TotalInformation } from "./styles";
+import { Button, ButtonLink, CartCardContainer, Row, Separate, TotalInformation } from "./styles";
 
 export function CartCard() {
   return (
@@ -29,7 +29,9 @@ export function CartCard() {
             <Price $number={33.20} $variant="largePrice" />
           </Row>
         </TotalInformation>
-        <Button>CONFIRMA PEDIDO</Button>
+          <ButtonLink to="/success">
+            <Button>CONFIRMA PEDIDO</Button>
+          </ButtonLink>
       </CartCardContainer>
     </Card>
   )

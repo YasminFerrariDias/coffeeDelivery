@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CartCardContainer = styled.div`
@@ -15,14 +16,14 @@ export const TotalInformation = styled.div`
   margin: 0.75rem 0;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const Row = styled.div`
   display: flex;
   margin: 0.75rem 0;
   flex-direction: row;
-  justify-content: space-between
-`
+  justify-content: space-between;
+`;
 
 export const Button = styled.div`
   background-color: ${(props) => props.theme['yellow']};
@@ -33,5 +34,11 @@ export const Button = styled.div`
   align-items: center;
   display: flex;
   border-radius: 0.375rem;
-`
+  text-decoration: none;
+`;
 
+export const ButtonLink = styled(Link)`
+  text-decoration: none;
+`;
+
+  
