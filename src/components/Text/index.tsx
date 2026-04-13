@@ -2,7 +2,7 @@ import type { DefaultTheme } from "styled-components"
 import { TextContainer } from "./styles"
 
 interface TextProps {
-  $variant?: 
+  $variant: 
   | 'text-l'
   | 'text-l-bold'
   | 'text-m'
@@ -12,7 +12,7 @@ interface TextProps {
   | 'tag'
   | 'button-g'
   | 'button-s'
-  text?: string,
+  text: string,
   color: keyof DefaultTheme;
 }
 

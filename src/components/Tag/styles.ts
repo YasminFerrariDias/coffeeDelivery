@@ -1,18 +1,12 @@
-import type { DefaultTheme } from "styled-components/dist/types";
 import styled from "styled-components";
 
-interface TagContainerProps {
-  $BackgroundColor: keyof DefaultTheme
-}
-
-export const TagContainer = styled.span<TagContainerProps>`
-  background: ${(props) => props.theme[props.$BackgroundColor]};
+export const TagContainer = styled.span`
+  background: ${(props) => props.theme['yellow-light']};
   padding: 0.25rem 0.5rem;
   width: auto;
   border-radius: 6.25rem; 
   justify-content: center;
-  align-items: center;
-  display: flex;
+  text-align: center;
   width: fit-content;
   height: fit-content
 `

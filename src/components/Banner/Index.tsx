@@ -1,7 +1,6 @@
 import { Advantages } from "../Advantages";
 import { Text } from "../Text";
 import { Title } from "../Title";
-
 import Coffee from "../../assets/img/coffee.png"
 import { AdvantagesSection, BannerContainer, ImageSection, LeftAdvantages, LeftContent, RightAdvantages, RightContent, TextSection } from "./styles";
 
