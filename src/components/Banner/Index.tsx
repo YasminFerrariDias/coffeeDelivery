@@ -22,7 +22,7 @@ export function Banner() {
 
           <RightAdvantages>
             <Advantages ColorIcon="base-text" variantSize={16} icon="Package" IconColor="base-text" text="Embalagem mantém o café intacto" $variant="text-m" color="base-text" />
-            <Advantages ColorIcon="white" variantSize={16} icon="Coffee" IconColor="purple" text="O café chega frasquinho até você" $variant="text-m" color="base-text" />
+            <Advantages ColorIcon="white" variantSize={16} icon="Coffee" IconColor="purple" text="O café chega fresquinho até você" $variant="text-m" color="base-text" />
           </RightAdvantages>
         </AdvantagesSection>
       </LeftContent>
