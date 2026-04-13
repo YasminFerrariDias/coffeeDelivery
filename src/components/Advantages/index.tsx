@@ -3,6 +3,7 @@ import type { ComponentProps } from 'react';
 import { Text } from '../Text'
 import type { DefaultTheme } from 'styled-components/dist/types';
 import { IconComponent } from '../IconComponent';
+import { IconBadge } from '../IconBadge';
 
 type TextProps = ComponentProps<typeof Text>
 type IconProps = ComponentProps<typeof IconComponent>
@@ -15,7 +16,7 @@ export function Advantages({ text, color, $variant: variant, IconColor, icon }: 
 
   return (
     <AdvantagesContainer $IconColor={IconColor}>
-      <span className='icon'><IconComponent ColorIcon={IconColor} icon={icon} variantSize={20} /></span>
+      <IconBadge icon={icon} $BackgroundVariant={IconColor} />
       <Text text={text} color={color} $variant={variant} />
     </AdvantagesContainer>
   )

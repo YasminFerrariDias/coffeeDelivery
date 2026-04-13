@@ -16,13 +16,13 @@ export function Banner() {
 
         <AdvantagesSection>
           <LeftAdvantages>
-            <Advantages icon="ShoppingCart" IconColor="yellow-dark" text="Compra simples e segura" $variant="text-m" color="base-text" />
-            <Advantages icon="Clock" IconColor="yellow" text="Entrega rápida e rastreada" $variant="text-m" color="base-text" />
+            <Advantages ColorIcon="yellow-dark" variantSize={16} icon="ShoppingCart" IconColor="yellow-dark" text="Compra simples e segura" $variant="text-m" color="base-text" />
+            <Advantages ColorIcon="yellow" variantSize={16} icon="Clock" IconColor="yellow" text="Entrega rápida e rastreada" $variant="text-m" color="base-text" />
           </LeftAdvantages>
 
           <RightAdvantages>
-            <Advantages icon="Box" IconColor="base-text" text="Embalagem mantém o café intacto" $variant="text-m" color="base-text" />
-            <Advantages icon="Coffee" IconColor="purple" text="O café chega frasquinho até você" $variant="text-m" color="base-text" />
+            <Advantages ColorIcon="base-text" variantSize={16} icon="Package" IconColor="base-text" text="Embalagem mantém o café intacto" $variant="text-m" color="base-text" />
+            <Advantages ColorIcon="white" variantSize={16} icon="Coffee" IconColor="purple" text="O café chega frasquinho até você" $variant="text-m" color="base-text" />
           </RightAdvantages>
         </AdvantagesSection>
       </LeftContent>

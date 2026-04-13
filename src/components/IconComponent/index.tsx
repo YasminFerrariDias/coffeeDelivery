@@ -1,9 +1,9 @@
-import { Clock, CreditCard, DollarSign, MapPin, MapPinned, ShoppingCart, Landmark, Banknote, Trash2 } from "lucide-react";
+import { Coffee, Package, Clock, CreditCard, DollarSign, MapPin, MapPinned, ShoppingCart, Landmark, Banknote, Trash2 } from "lucide-react";
 import { IconComponentContainer } from "./styles";
 import type { DefaultTheme } from "styled-components/dist/types";
 
 interface IconComponentProps {
-  icon: 'Clock' | 'ShoppingCart' | 'MapPin' | 'MapPinned' | 'DollarSign' | 'CreditCard' | 'Landmark' | 'Banknote' | 'Trash2',
+  icon: 'Coffee' | 'Package' | 'Clock' | 'ShoppingCart' | 'MapPin' | 'MapPinned' | 'DollarSign' | 'CreditCard' | 'Landmark' | 'Banknote' | 'Trash2',
   ColorIcon: keyof DefaultTheme,
   variantSize: 22 | 20 | 16,
   className?: string
@@ -11,6 +11,8 @@ interface IconComponentProps {
 
 export function IconComponent({ icon, className, ColorIcon, variantSize = 22 }: IconComponentProps) {
   const Icon = {
+    Coffee,
+    Package,
     ShoppingCart,
     MapPin,
     MapPinned,

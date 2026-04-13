@@ -1,24 +1,12 @@
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
-import { Checkout } from './pages/Checkout'
-
-{/*
-import { Home } from './pages/Home'
-import { Success } from './pages/Success'
-
-*/ }
+import { Outlet } from 'react-router-dom'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      {/*
-      <Home />
-      <Success />
-      */}
-<Checkout />
-      
-
+      <Outlet />
       <GlobalStyle />
     </ThemeProvider>
   )

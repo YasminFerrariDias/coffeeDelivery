@@ -4,7 +4,7 @@ import { IconComponent } from "../IconComponent";
 
 interface IconBadgeProps {
   $BackgroundVariant: keyof DefaultTheme;
-  icon: 'Clock' | 'ShoppingCart' | 'MapPin' | 'MapPinned' | 'DollarSign' | 'CreditCard' | 'Landmark' | 'Banknote' | 'Trash2',
+  icon: 'Coffee' | 'Package' | 'Clock' | 'ShoppingCart' | 'MapPin' | 'MapPinned' | 'DollarSign' | 'CreditCard' | 'Landmark' | 'Banknote' | 'Trash2',
 }
 
 export function IconBadge({ $BackgroundVariant, icon }: IconBadgeProps) {
