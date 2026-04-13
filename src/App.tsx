@@ -1,11 +1,12 @@
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
-import { Success } from './pages/Success'
+import { Checkout } from './pages/Checkout'
 
 {/*
 import { Home } from './pages/Home'
-import { Checkout } from './pages/Checkout'
+import { Success } from './pages/Success'
+
 */ }
 
 export function App() {
@@ -13,10 +14,10 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       {/*
       <Home />
-      <Checkout />
-      */}
-
       <Success />
+      */}
+<Checkout />
+      
 
       <GlobalStyle />
     </ThemeProvider>

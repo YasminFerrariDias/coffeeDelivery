@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SuccessCardContainer = styled.div`
   background-color: ${(props) => props.theme['base-card']};
+  width: 28.5rem;
   max-width: 32.875rem;
   max-height: 16.875rem;
   border: 1px solid transparent;
