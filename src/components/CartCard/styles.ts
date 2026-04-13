@@ -35,6 +35,11 @@ export const Button = styled.div`
   display: flex;
   border-radius: 0.375rem;
   text-decoration: none;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: ${(props) => props.theme['yellow-dark']};
+  }
 `;
 
 export const ButtonLink = styled(Link)`
