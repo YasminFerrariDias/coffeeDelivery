@@ -11,10 +11,10 @@ interface ButtonProps extends TextProps, IconProps {
   ColorVariant: keyof DefaultTheme
 }
 
-export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, }: ButtonProps) {
+export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize  }: ButtonProps) {
   return (
     <ButtonContainer $ColorVariant={ColorVariant}>
-      <IconComponent icon={icon} ColorIcon={ColorIcon} />
+      <IconComponent icon={icon} ColorIcon={ColorIcon} variantSize={variantSize}/>
       {text && (
         <Text
           color={color}
