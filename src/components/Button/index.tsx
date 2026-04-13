@@ -9,9 +9,10 @@ type IconProps = ComponentProps<typeof IconComponent>
 
 interface ButtonProps extends TextProps, IconProps {
   ColorVariant: keyof DefaultTheme
+  children?: React.ReactNode
 }
 
-export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize  }: ButtonProps) {
+export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children }: ButtonProps) {
   return (
     <ButtonContainer $ColorVariant={ColorVariant}>
       <IconComponent icon={icon} ColorIcon={ColorIcon} variantSize={variantSize}/>
@@ -22,6 +23,7 @@ export function Button({ ColorVariant, icon, ColorIcon, $variant, color, text, v
           $variant={$variant}
         />
       )}
+      {children}
     </ButtonContainer>
   )
 }

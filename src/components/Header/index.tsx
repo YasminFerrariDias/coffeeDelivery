@@ -1,6 +1,8 @@
 import { Button } from "../Button";
 import { HeaderContainer } from "./styles";
 import Logo from '../../assets/logo/logo-coffeeDelivery.svg';
+import { Link } from "react-router";
+
 
 export function Header() {
   return (
@@ -8,13 +10,9 @@ export function Header() {
       <img src={Logo} />
       <div>
         <Button variantSize={22} icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
-        <Button variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark" ColorVariant="yellow-light" color="background">
-          <Routers>
-            <Router>
-              
-            </Router>
-          </Routers>
-        </Button>
+        <Link to="/payment">
+          <Button variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark" ColorVariant="yellow-light" color="background"></Button>
+        </Link>
       </div>
     </HeaderContainer>
   )
