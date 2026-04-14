@@ -1,12 +1,24 @@
-import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from './styles/global'
-import { defaultTheme } from './styles/themes/default'
-import { Outlet } from 'react-router-dom'
+/* import { Outlet } from 'react-router-dom' */
 
-export function App() {
+import { GlobalStyle } from './styles/global'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import type React from "react"
+import { AppProvider } from './context';
+import Page from './pages/page';
+
+export function App({
+  children
+} : {
+ children: React.ReactNode;
+}) {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Outlet />
+      {/*   <Outlet /> */}
+      <AppProvider>
+        {children}
+        <Page />
+      </AppProvider>
       <GlobalStyle />
     </ThemeProvider>
   )
