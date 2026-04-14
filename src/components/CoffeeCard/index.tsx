@@ -2,7 +2,7 @@ import { AddCart, CoffeeCardContainer } from "./styles";
 import { Title } from "../Title";
 import { Text } from "../Text";
 import { Price } from "../Price";
-import { Count } from "../Count";
+import { Count } from "../Count"; 
 import { Button } from "../Button";
 
 import Americano from '../../assets/img/Type=Americano.svg';
@@ -30,7 +30,7 @@ type TagOption =
   | 'ALCOÓLICO'
 
 interface CoffeeCardProps {
-  tagValue: TagOption[]
+  tagValue: readonly TagOption[]
   text: string
   textTitle: string
   price: number
@@ -65,7 +65,6 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
               <Tag key={value} tagValue={value} />
             ))
           }
-
         </span>
         <span className="title"><Title text={textTitle} $color="base-subtitle" $variant="title-s" /></span>
         <span className="text"><Text text={text} color="base-label" $variant="text-s" /></span>

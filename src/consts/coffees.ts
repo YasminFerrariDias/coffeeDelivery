@@ -1,4 +1,4 @@
-const coffees = [
+export const coffees = [
   {
     img: 'Expresso',
     tagValue: ['TRADICIONAL'],
@@ -97,6 +97,4 @@ const coffees = [
     text: 'Bebida à base de café, uísque irlandês, açúcar e chantilly',
     price: 9.9,
   },
-]
-
-console.log(coffees)
+] as const
