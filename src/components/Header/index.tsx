@@ -13,7 +13,7 @@ export function Header() {
       <div>
         <ButtonText variantSize={22} icon="MapPin" ColorIcon="purple" text="Porto Alegre, RS" ColorVariant="purple-light" color="purple-dark" $variant="text-s" />
         <Link to="/payment">
-          <Button ColorVariant="yellow" variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark"></Button>
+          <Button ColorVariant="yellow-light" variantSize={22} icon="ShoppingCart" ColorIcon="yellow-dark"></Button>
         </Link>
       </div>
     </HeaderContainer>

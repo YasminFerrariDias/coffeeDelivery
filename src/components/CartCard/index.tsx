@@ -30,7 +30,7 @@ export function CartCard() {
           </Row>
         </TotalInformation>
           <ButtonLink to="/success">
-          {/* USAR O NUTTONtEXT */}
+          
             <Button><Text text="CONFIRMAR PEDIDO" color="white" $variant="button-g" /></Button>
           </ButtonLink>
       </CartCardContainer>

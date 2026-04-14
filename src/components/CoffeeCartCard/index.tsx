@@ -1,7 +1,7 @@
 import ExpressoTradicionalImg from '../../assets/img/Type=Expresso.svg'
 import LatteImg from '../../assets/img/Type=Latte.svg'
 
-import { Button } from '../ButtonText'
+import { ButtonText } from '../ButtonText'
 import { Card } from '../Card'
 import { Count } from '../Count'
 import { Price } from '../Price'
@@ -23,7 +23,6 @@ export function CoffeeCartCard({ text, number, img, }: CoffeeCartCardProps) {
   const selectedImage = coffeeImages[img]
 
   return (
-
     <Card $variant="mediumCart">
       <CoffeeCartCardContainer>
         <Cart>
@@ -33,7 +32,7 @@ export function CoffeeCartCard({ text, number, img, }: CoffeeCartCardProps) {
             <Text text={text} color="base-subtitle" $variant="text-m" />
             <Buttons>
               <Count />
-              <Button icon="Trash2" text='REMOVER' ColorIcon="purple" variantSize={16} $variant="button-s" color="base-text" ColorVariant="base-button" $ColorHover='base-hover' />
+              <ButtonText icon="Trash2" text='REMOVER' ColorIcon="purple" variantSize={16} $variant="button-s" color="base-text" ColorVariant="base-button" $ColorHover='base-hover' />
             </Buttons>
           </Info>
         </Cart>

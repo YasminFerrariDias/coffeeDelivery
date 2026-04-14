@@ -7,6 +7,5 @@ export const TagContainer = styled.span`
   border-radius: 6.25rem; 
   justify-content: center;
   text-align: center;
-  width: fit-content;
-  height: fit-content
+  display: flex;
 `
