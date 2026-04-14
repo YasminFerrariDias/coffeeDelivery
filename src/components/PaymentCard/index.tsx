@@ -19,9 +19,9 @@ export function PaymentCard() {
         </Information>
         
         <Buttons>
-          <ButtonPayment variantText="CARTÃO DE CRÉDITO" icon="CreditCard" variantSize={16} />
-          <ButtonPayment variantText="CARTÃO DE DÉBITO" icon="Landmark" variantSize={16} />
-          <ButtonPayment variantText="DINHEIRO" icon="Banknote" variantSize={16} />
+          <ButtonPayment type="CREDITO" icon="CreditCard" variantSize={16} />
+          <ButtonPayment type="DEBITO" icon="Landmark" variantSize={16} />
+          <ButtonPayment type="DINHEIRO" icon="Banknote" variantSize={16} />
         </Buttons>
       </Card>
     </PaymentCardContainer>
