@@ -7,15 +7,11 @@ import { Button } from "../Button";
 import { Card } from "../Card";
 import { Tag } from "../Tag";
 import { coffeeImages } from '../../consts/coffeeImages'
+import { tagOptions } from "../../consts/tagOptions";
 
 type CoffeeImage = keyof typeof coffeeImages
 
-type TagOption =
-  | 'TRADICIONAL'
-  | 'COM LEITE'
-  | 'GELADO'
-  | 'ESPECIAL'
-  | 'ALCOÓLICO'
+type TagOption = keyof typeof tagOptions
 
 interface CoffeeCardProps {
   tagValue: readonly TagOption[]
@@ -27,14 +23,16 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCardProps) {
   const Img = coffeeImages[img]
+
   return (
     <Card $variant="smallRounded"  >
       <CoffeeCardContainer>
         <img src={Img} />
+
         <span className="tags">
           {
-            tagValue.map((value) => (
-              <Tag key={value} tagValue={value} />
+            tagValue.map((tagValue) => (
+              <Tag key={tagValue} tagValue={tagValue} />
             ))
           }
         </span>
