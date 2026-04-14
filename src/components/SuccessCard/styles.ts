@@ -7,7 +7,7 @@ export const SuccessCardContainer = styled.div`
   max-height: 16.875rem;
   border: 1px solid transparent;
   background: 
-     linear-gradient(${(props) => props.theme['background']}, ${(props) => props.theme['background']}) padding-box,
+    linear-gradient(${(props) => props.theme['background']}, ${(props) => props.theme['background']}) padding-box,
     linear-gradient(white, white) padding-box,
     linear-gradient(
       90deg,

@@ -10,7 +10,6 @@ import { coffeeImages } from '../../consts/coffeeImages'
 import { tagOptions } from "../../consts/tagOptions";
 
 type CoffeeImage = keyof typeof coffeeImages
-
 type TagOption = keyof typeof tagOptions
 
 interface CoffeeCardProps {

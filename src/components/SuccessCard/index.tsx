@@ -19,7 +19,7 @@ export function SuccessCard() {
       <InfoItem>
         <IconBadge icon={"Clock"} $BackgroundVariant="yellow" />
         <Info>
-          <Text text="Previsõa de entrega" color="base-text" $variant="text-m" />
+          <Text text="Previsão de entrega" color="base-text" $variant="text-m" />
           <Text text="20 min - 30 min" color="base-text" $variant="text-m-bold" />
         </Info>
       </InfoItem>
