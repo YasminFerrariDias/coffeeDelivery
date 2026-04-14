@@ -1,9 +1,11 @@
-import { Plus, Minus, Coffee, Package, Clock, CreditCard, DollarSign, MapPin, MapPinned, ShoppingCart, Landmark, Banknote, Trash2 } from "lucide-react";
 import { IconComponentContainer } from "./styles";
 import type { DefaultTheme } from "styled-components/dist/types";
+import { icons } from "../../consts/icons";
+
+type Icon = keyof typeof icons
 
 interface IconComponentProps {
-  icon: 'Plus' | 'Minus' | 'Coffee' | 'Package' | 'Clock' | 'ShoppingCart' | 'MapPin' | 'MapPinned' | 'DollarSign' | 'CreditCard' | 'Landmark' | 'Banknote' | 'Trash2',
+  icon: Icon,
   ColorIcon: keyof DefaultTheme,
   variantSize: 14 | 16 | 20 | 22
   className?: string
@@ -11,21 +13,7 @@ interface IconComponentProps {
 }
 
 export function IconComponent({ icon, className, ColorIcon, variantSize = 22, $ColorIconHover }: IconComponentProps) {
-  const Icon = {
-    Coffee,
-    Package,
-    ShoppingCart,
-    MapPin,
-    MapPinned,
-    DollarSign,
-    CreditCard,
-    Landmark,
-    Banknote,
-    Trash2,
-    Clock,
-    Minus,
-    Plus,
-  }[icon]
+  const Icon = icons[icon]
 
   return (
     <IconComponentContainer $ColorIcon={ColorIcon} className={className} $ColorIconHover={$ColorIconHover} >

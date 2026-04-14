@@ -1,10 +1,13 @@
 import type { DefaultTheme } from "styled-components/dist/types";
 import { IconBadgeContainer } from "./styles";
 import { IconComponent } from "../IconComponent";
+import type { icons } from "../../consts/icons";
+
+type Icon = keyof typeof icons
 
 interface IconBadgeProps {
   $BackgroundVariant: keyof DefaultTheme;
-  icon: 'Plus' | 'Minus' | 'Coffee' | 'Package' | 'Clock' | 'ShoppingCart' | 'MapPin' | 'MapPinned' | 'DollarSign' | 'CreditCard' | 'Landmark' | 'Banknote' | 'Trash2',
+  icon: Icon;
 }
 
 export function IconBadge({ $BackgroundVariant, icon }: IconBadgeProps) {
