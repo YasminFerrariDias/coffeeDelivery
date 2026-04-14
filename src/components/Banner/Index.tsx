@@ -28,7 +28,7 @@ export function Banner() {
 
       <RightContent>
         <ImageSection>
-          <img src={Coffee} alt="" />
+          <img src={Coffee} />
         </ImageSection>
       </RightContent>
     </BannerContainer>
