@@ -21,23 +21,23 @@ export function AddressCard() {
         
         <Form>
           <RowOne>
-            <InputText $variableSize="small" placeholder="CEP" mask={insertMaskCep} />
+            <InputText $variableSize="small" placeholder="CEP" mask={insertMaskCep} name="CEP" />
           </RowOne>
 
           <RowTwo>
-            <InputText $variableSize="extraLarge" placeholder="Rua" />
+            <InputText $variableSize="extraLarge" placeholder="Rua" name="Rua" />
           </RowTwo>
 
           <RowThree>
-            <InputText $variableSize="small" placeholder="Número" />
-            <InputText $variableSize="large" placeholder="Complemento" />
+            <InputText $variableSize="small" placeholder="Número" name="Número"/>
+            <InputText $variableSize="large" placeholder="Complemento" name="Complemento" />
             <SpanText className="text-s">Opcional</SpanText>
           </RowThree>
 
           <RowFour>
-            <InputText $variableSize="small" placeholder="Bairro" />
-            <InputText $variableSize="medium" placeholder="Cidade " />
-            <InputText $variableSize="mini" placeholder="UF" />
+            <InputText $variableSize="small" placeholder="Bairro" name="Bairro"/>
+            <InputText $variableSize="medium" placeholder="Cidade " name="Cidade"/>
+            <InputText $variableSize="mini" placeholder="UF" name="UF"/>
           </RowFour>
         </Form>
       </Card>
