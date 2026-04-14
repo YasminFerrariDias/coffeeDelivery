@@ -1,11 +1,10 @@
-/* import { Outlet } from 'react-router-dom' */
+/* import { AppProvider } from './context'; */
 
 import { GlobalStyle } from './styles/global'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
 import type React from "react"
-import { AppProvider } from './context';
-import Page from './pages/page';
+import { Outlet } from 'react-router-dom';
 
 export function App({
   children
@@ -14,11 +13,9 @@ export function App({
 }) {
   return (
     <ThemeProvider theme={defaultTheme}>
-      {/*   <Outlet /> */}
-      <AppProvider>
+        <Outlet /> 
         {children}
-        <Page />
-      </AppProvider>
+        {/* <AppProvider></AppProvider>  */}
       <GlobalStyle />
     </ThemeProvider>
   )
