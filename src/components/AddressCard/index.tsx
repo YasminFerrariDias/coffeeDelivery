@@ -1,3 +1,4 @@
+import { insertMaskCep } from "../../function/cep";
 import { Card } from "../Card";
 import { IconComponent } from "../IconComponent";
 import { InputText } from "../InputText";
@@ -20,7 +21,7 @@ export function AddressCard() {
         
         <Form>
           <RowOne>
-            <InputText $variableSize="small" placeholder="CEP" />
+            <InputText $variableSize="small" placeholder="CEP" mask={insertMaskCep} />
           </RowOne>
 
           <RowTwo>

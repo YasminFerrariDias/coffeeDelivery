@@ -2,7 +2,7 @@ import { InputTextContainer } from "./styles"
 
 interface InputTextProps {
   placeholder: string
-  mask?: string
+  mask?: (value: string) => string
   $variableSize: 'mini' | 'small' | 'medium' | 'large' | 'extraLarge'
 }
 
