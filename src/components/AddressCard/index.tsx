@@ -1,11 +1,22 @@
+import { useForm } from "react-hook-form";
+import { useAddress } from "../../context/useAddress";
 import { insertMaskCep } from "../../function/cep";
 import { Card } from "../Card";
 import { IconComponent } from "../IconComponent";
 import { InputText } from "../InputText";
 import { Text } from "../Text";
 import { Icon, AddressCardContainer, Description, Form, RowFour, RowOne, RowThree, RowTwo, Information, SpanText } from "./styles";
+import type { AddressProps } from "../../context/AddressContext";
 
 export function AddressCard() {
+  const { setAddressState } = useAddress();
+
+  const { register, handleSubmit } = useForm<AddressProps>();
+
+  const handleSetAddress(data: AddressProps) {
+    setAddressState(data);
+  } 
+
   return (
     <AddressCardContainer>
       <Card $variant="mediumSquare">
@@ -19,24 +30,24 @@ export function AddressCard() {
           </Description>
         </Information>
         
-        <Form>
+        <Form onSubmit={handleSubmit(handleSetAddress)}>
           <RowOne>
-            <InputText $variableSize="small" placeholder="CEP" mask={insertMaskCep} name="CEP" />
+            <InputText $variableSize="small" placeholder="CEP" mask={insertMaskCep} {...register("cep")} />
           </RowOne>
 
           <RowTwo>
-            <InputText $variableSize="extraLarge" placeholder="Rua" name="Rua" />
+            <InputText $variableSize="extraLarge" placeholder="Rua" {...register("rua")}/>
           </RowTwo>
 
           <RowThree>
-            <InputText $variableSize="small" placeholder="Número" name="Número"/>
-            <InputText $variableSize="large" placeholder="Complemento" name="Complemento" />
+            <InputText $variableSize="small" placeholder="Número" {...register("numero")} />
+            <InputText $variableSize="large" placeholder="Complemento" {...register("complemento")} />
             <SpanText className="text-s">Opcional</SpanText>
           </RowThree>
 
           <RowFour>
-            <InputText $variableSize="small" placeholder="Bairro" name="Bairro"/>
-            <InputText $variableSize="medium" placeholder="Cidade " name="Cidade"/>
+            <InputText $variableSize="small" placeholder="Bairro" {...register("bairro")} />
+            <InputText $variableSize="medium" placeholder="Cidade " {...register("cidade")} />
             <InputText $variableSize="mini" placeholder="UF" name="UF"/>
           </RowFour>
         </Form>
