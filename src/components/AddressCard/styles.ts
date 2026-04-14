@@ -40,9 +40,21 @@ export const RowTwo = styled.div`
 export const RowThree = styled.div`
   gap: 0.75rem;
   display: flex;
+  position: relative;
+  width: 100%;
 `;
 
 export const RowFour = styled.div`
   gap: 0.75rem;
   display: flex;
+`;
+
+export const SpanText = styled.span`
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-style: italic;
+  color: ${(props) => props.theme['base-label']};
+  pointer-events: none;
 `;

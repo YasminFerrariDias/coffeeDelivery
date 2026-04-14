@@ -3,7 +3,7 @@ import { Card } from "../Card";
 import { IconComponent } from "../IconComponent";
 import { InputText } from "../InputText";
 import { Text } from "../Text";
-import { Icon, AddressCardContainer, Description, Form, RowFour, RowOne, RowThree, RowTwo, Information } from "./styles";
+import { Icon, AddressCardContainer, Description, Form, RowFour, RowOne, RowThree, RowTwo, Information, SpanText } from "./styles";
 
 export function AddressCard() {
   return (
@@ -31,6 +31,7 @@ export function AddressCard() {
           <RowThree>
             <InputText $variableSize="small" placeholder="Número" />
             <InputText $variableSize="large" placeholder="Complemento" />
+            <SpanText className="text-s">Opcional</SpanText>
           </RowThree>
 
           <RowFour>
