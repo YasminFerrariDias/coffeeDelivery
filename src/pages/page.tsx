@@ -1,7 +1,7 @@
 'use client';
 
 import { useForm } from "react-hook-form";
-import { useAuth } from "../context/auth";
+import { useAuth } from "../EXEMPLO_CONTEXTAPI/auth";
 
 export default function Page() {
   const { user, login, logout } = useAuth();

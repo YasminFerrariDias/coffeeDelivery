@@ -2,11 +2,10 @@ import { useState } from "react";
 import { AddressContext, type AddressProps } from "./AddressContext";
 
 export const AddressProvider = ({ children }: { children: React.ReactNode }) => {
-  const [address, setAddressState] = useState<AddressProps | null>(null)
+  const [address, setAddressState ] = useState<AddressProps | null>(null)
 
   const setAddress = (data: AddressProps) => {
     setAddressState(data);
-
     console.log(data);
   }
 
@@ -16,7 +15,13 @@ export const AddressProvider = ({ children }: { children: React.ReactNode }) => 
   }
 
   return(
-    <AddressContext.Provider value={{ address, setAddress, clearAddress}}>
+    <AddressContext.Provider 
+      value={{ 
+        address: address, 
+        setAddressState: setAddress, 
+        clearAddress,
+      }}
+    >
       {children}
     </AddressContext.Provider>
   )

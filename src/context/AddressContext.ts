@@ -7,11 +7,12 @@ export type AddressProps = {
   complemento?: string;
   bairro: string;
   cidade: string;
+  uf: string;
 }
 
 type AddressContextProps = {
   address: AddressProps | null;
-  setAddress: (data: AddressProps) => void;
+  setAddressState: (data: AddressProps) => void;
   clearAddress: () => void;
 }
 

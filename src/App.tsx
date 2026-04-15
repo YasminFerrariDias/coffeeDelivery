@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
 import type React from "react"
 import { Outlet } from 'react-router-dom';
+import { AddressProvider } from './context/AddressProvider';
 
 export function App({
   children
@@ -13,9 +14,10 @@ export function App({
 }) {
   return (
     <ThemeProvider theme={defaultTheme}>
+      <AddressProvider>
         <Outlet /> 
         {children}
-        {/* <AppProvider></AppProvider>  */}
+      </AddressProvider>
       <GlobalStyle />
     </ThemeProvider>
   )

@@ -1,14 +1,14 @@
+import { forwardRef, type InputHTMLAttributes } from "react"
 import { InputTextContainer } from "./styles"
 
-interface InputTextProps {
-  placeholder: string
-  mask?: (value: string) => string
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   $variableSize: 'mini' | 'small' | 'medium' | 'large' | 'extraLarge'
-  name: string
+
 }
 
-export function InputText({ placeholder, $variableSize, name }: InputTextProps ) {
+export const InputText = forwardRef<HTMLInputElement, InputTextProps>(
+  ({ $variableSize, ...rest }, ref) => {
   return (
-    <InputTextContainer placeholder={placeholder} $variableSize={$variableSize} className={name} />
+    <InputTextContainer ref={ref} $variableSize={$variableSize} {...rest} />
   )
-}
+})

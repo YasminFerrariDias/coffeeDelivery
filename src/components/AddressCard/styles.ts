@@ -22,7 +22,7 @@ export const Description = styled.div`
 
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   width: 35rem;
   height: 13.5rem;
   display: flex;

@@ -1,19 +1,20 @@
 import { useForm } from "react-hook-form";
-import { useAddress } from "../../context/useAddress";
-import { insertMaskCep } from "../../function/cep";
 import { Card } from "../Card";
 import { IconComponent } from "../IconComponent";
 import { InputText } from "../InputText";
 import { Text } from "../Text";
 import { Icon, AddressCardContainer, Description, Form, RowFour, RowOne, RowThree, RowTwo, Information, SpanText } from "./styles";
 import type { AddressProps } from "../../context/AddressContext";
+import { useAddress } from "../../context/useAddress";
 
 export function AddressCard() {
-  const { setAddressState } = useAddress();
-
+  const { address, setAddressState, clearAddress } = useAddress();
   const { register, handleSubmit } = useForm<AddressProps>();
 
-  const handleSetAddress(data: AddressProps) {
+console.log(address);
+
+  const handleSetAddress = (data: AddressProps) => {
+    console.log("DADOS DO FORM:", data);
     setAddressState(data);
   } 
 
@@ -32,7 +33,7 @@ export function AddressCard() {
         
         <Form onSubmit={handleSubmit(handleSetAddress)}>
           <RowOne>
-            <InputText $variableSize="small" placeholder="CEP" mask={insertMaskCep} {...register("cep")} />
+            <InputText $variableSize="small" placeholder="CEP" {...register("cep")} />
           </RowOne>
 
           <RowTwo>
@@ -48,8 +49,10 @@ export function AddressCard() {
           <RowFour>
             <InputText $variableSize="small" placeholder="Bairro" {...register("bairro")} />
             <InputText $variableSize="medium" placeholder="Cidade " {...register("cidade")} />
-            <InputText $variableSize="mini" placeholder="UF" name="UF"/>
+            <InputText $variableSize="mini" placeholder="UF" {...register("uf")} />
           </RowFour>
+          <button type="submit">Salvar</button>
+          <button onClick={clearAddress}>Limpar</button>
         </Form>
       </Card>
 
