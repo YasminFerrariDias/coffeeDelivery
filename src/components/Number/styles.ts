@@ -11,7 +11,6 @@ interface NumberContainerProps {
   | 'base-subtitle'
   | 'base-text'
   className?: string
-  $number: number | string
 }
 
 export const NumberContainer = styled.div.attrs<NumberContainerProps>(

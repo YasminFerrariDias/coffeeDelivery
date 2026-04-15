@@ -10,14 +10,14 @@ interface NumberProps {
   | 'base-title'
   | 'base-subtitle'
   | 'base-text'
-  $number: number | string
+  $number: number | string 
   className?: string
 }
 
 export function Number({ $variantText, $variantColor, $number }: NumberProps) {
   return (
-    <NumberContainer $variantText={$variantText} $variantColor={$variantColor} $number={$number} className="number" >
-      {$number && <span>{$number}</span>}
+    <NumberContainer $variantText={$variantText} $variantColor={$variantColor} className="number" >
+      <span>{$number}</span>
     </NumberContainer>
   )
 } 
