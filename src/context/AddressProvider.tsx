@@ -6,12 +6,6 @@ export const AddressProvider = ({ children }: { children: React.ReactNode }) => 
 
   const setAddress = (data: AddressProps) => {
     setAddressState(data);
-    console.log(data);
-  }
-
-  const clearAddress = () => {
-    setAddressState(null)
-    console.log("limpo")
   }
 
   return(
@@ -19,7 +13,6 @@ export const AddressProvider = ({ children }: { children: React.ReactNode }) => 
       value={{ 
         address: address, 
         setAddressState: setAddress, 
-        clearAddress,
       }}
     >
       {children}

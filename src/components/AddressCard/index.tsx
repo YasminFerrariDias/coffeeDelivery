@@ -8,10 +8,8 @@ import type { AddressProps } from "../../context/AddressContext";
 import { useAddress } from "../../context/useAddress";
 
 export function AddressCard() {
-  const { address, setAddressState, clearAddress } = useAddress();
+  const { setAddressState } = useAddress();
   const { register, handleSubmit } = useForm<AddressProps>();
-
-console.log(address);
 
   const handleSetAddress = (data: AddressProps) => {
     console.log("DADOS DO FORM:", data);
@@ -52,7 +50,6 @@ console.log(address);
             <InputText $variableSize="mini" placeholder="UF" {...register("uf")} />
           </RowFour>
           <button type="submit">Salvar</button>
-          <button onClick={clearAddress}>Limpar</button>
         </Form>
       </Card>
 

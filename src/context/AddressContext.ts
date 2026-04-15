@@ -13,7 +13,6 @@ export type AddressProps = {
 type AddressContextProps = {
   address: AddressProps | null;
   setAddressState: (data: AddressProps) => void;
-  clearAddress: () => void;
 }
 
 export const AddressContext = createContext<AddressContextProps>({} as AddressContextProps)
