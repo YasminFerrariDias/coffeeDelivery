@@ -5,6 +5,7 @@ interface CardProps {
   $variant: 'smallRounded' | 'mediumRounded' | 'smallSquare' | 'mediumSquare' | 'mediumCart';
   children: ReactNode
   className?: string
+  onClick?: () => void;
 }
 
 export function Card({ children, $variant, className }: CardProps) {

@@ -7,6 +7,7 @@ import type React from "react"
 import { Outlet } from 'react-router-dom';
 import { AddressProvider } from './context/AddressProvider';
 import { PaymentProvider } from './context/PaymenProvider';
+import { CartProvider } from './context/CartProvider';
 
 export function App({
   children
@@ -17,11 +18,13 @@ export function App({
     <ThemeProvider theme={defaultTheme}>
       <AddressProvider>
         <PaymentProvider>
-          <Outlet />
-          {children}
+          <CartProvider>
+            <Outlet />
+            {children}
+          </CartProvider>
         </PaymentProvider>
       </AddressProvider>
       <GlobalStyle />
-    </ThemeProvider>
+    </ThemeProvider >
   )
 }

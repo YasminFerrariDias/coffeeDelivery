@@ -1,13 +1,16 @@
-import { AddCart, CoffeeCardContainer } from "./styles";
+import { AddCart, CoffeeCardContainer, CountContainer, Operation, Result } from "./styles";
 import { Title } from "../Title";
 import { Text } from "../Text";
 import { Price } from "../Price";
-import { Count } from "../Count"; 
 import { Button } from "../Button";
 import { Card } from "../Card";
 import { Tag } from "../Tag";
-import { coffeeImages } from '../../consts/coffeeImages'
+import { coffeeImages } from '../../consts/coffeeImages';
 import { tagOptions } from "../../consts/tagOptions";
+import { useCounter } from "../../hooks/useCounter";
+import { IconComponent } from "../IconComponent";
+import { Number } from "../Number";
+import { useCart } from "../../context/useCart";
 
 type CoffeeImage = keyof typeof coffeeImages
 type TagOption = keyof typeof tagOptions
@@ -22,6 +25,8 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCardProps) {
   const Img = coffeeImages[img]
+  const [count, addItems, removeItems] = useCounter();
+  const { addToCart } = useCart();
 
   return (
     <Card $variant="smallRounded"  >
@@ -40,11 +45,38 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
         <footer>
           <Price $number={price} $variant="smallLargePrice" />
           <AddCart>
-            <Count />
-            <Button variantSize={22} icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $ColorHover="purple" />
+            <CountContainer>
+              <Operation onClick={removeItems}>
+                <IconComponent icon="Minus" ColorIcon="purple" variantSize={14} $ColorIconHover="purple-dark" />
+              </Operation>
+
+              <Result>
+                <Number $variantColor="base-title" $variantText="text-m" $number={count} className='number' />
+              </Result>
+
+              <Operation onClick={addItems}>
+                <IconComponent icon="Plus" ColorIcon="purple" variantSize={14} $ColorIconHover="purple-dark" />
+              </Operation>
+            </CountContainer>
+            <Button variantSize={22} icon="ShoppingCart" ColorIcon="base-card" ColorVariant="purple-dark" $ColorHover="purple" onClick={() => {
+              console.log("Clicou no carrinho");
+              console.log({
+                img,
+                name: textTitle,
+                price,
+                amount: count,
+              });
+
+              addToCart({
+                img,
+                name: textTitle,
+                price,
+                amount: count,
+              });
+            }} />
           </AddCart>
         </footer>
       </CoffeeCardContainer>
     </Card>
   )
-} 
+}

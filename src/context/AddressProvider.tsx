@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AddressContext, type AddressProps } from "./AddressContext";
 
 export const AddressProvider = ({ children }: { children: React.ReactNode }) => {
-  const [address, setAddressState ] = useState<AddressProps | null>(null)
+  const [ address, setAddressState ] = useState<AddressProps | null>(null)
 
   const setAddress = (data: AddressProps) => {
     setAddressState(data);

@@ -3,7 +3,6 @@ import { Number } from "../Number";
 import { IconComponent } from "../IconComponent";
 import { useCounter } from "../../hooks/useCounter";
 
-
 export function Count() {
   const [count, addItems, removeItems] = useCounter();
 

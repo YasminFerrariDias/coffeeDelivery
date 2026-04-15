@@ -4,6 +4,7 @@ import type { DefaultTheme } from "styled-components/dist/types";
 interface ButtonContainerProps {
   $ColorVariant: keyof DefaultTheme
   $ColorHover?: keyof DefaultTheme
+  onClick?: () => void
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
