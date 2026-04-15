@@ -1,7 +1,8 @@
 import { createContext } from "react";
+import type { CoffeeImage } from "../components/CartCard";
 
 export type CartProps = {
-  img: string;
+  img: CoffeeImage;
   name: string;
   price: number;
   amount: number;

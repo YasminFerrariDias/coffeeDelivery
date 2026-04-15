@@ -1,17 +1,29 @@
+import type { coffeeImages } from "../../consts/coffeeImages";
+import { useCart } from "../../context/useCart";
 import { Card } from "../Card";
 import { CoffeeCartCard } from "../CoffeeCartCard";
 import { Price } from "../Price";
 import { Text } from "../Text";
 import { Button, ButtonLink, CartCardContainer, Row, Separate, TotalInformation } from "./styles";
 
+export type CoffeeImage = keyof typeof coffeeImages;
+
 export function CartCard() {
+  const { cart } = useCart();
+
   return (
     <Card $variant="mediumRounded">
       <CartCardContainer>
-        <CoffeeCartCard img="ExpressoTradicional" text="Expresso Tradicional" number={9.90} />
-        <Separate />
-        <CoffeeCartCard img="Latte" text="Latte" number={9.90} />
-        <Separate />
+
+        {cart.map((item) => {
+          return (
+            <div key={`${item.name}-${item.price}-${item.amount}`}>
+              <CoffeeCartCard img={item.img} number={item.price} text={item.name} />
+              <Separate />
+            </div>
+          )
+        })}
+
 
         <TotalInformation>
           <Row>
@@ -29,9 +41,9 @@ export function CartCard() {
             <Price $number={33.20} $variant="largePrice" />
           </Row>
         </TotalInformation>
-          <ButtonLink to="/success">
-            <Button><Text text="CONFIRMAR PEDIDO" color="white" $variant="button-g" /></Button>
-          </ButtonLink>
+        <ButtonLink to="/success">
+          <Button><Text text="CONFIRMAR PEDIDO" color="white" $variant="button-g" /></Button>
+        </ButtonLink>
       </CartCardContainer>
     </Card>
   )
