@@ -1,6 +1,7 @@
 import { PAYMENT_OPTIONS } from "../../consts/paymentType";
 import { IconComponent } from "../IconComponent";
 import { ButtonPaymentContainer } from "./styles";
+import { usePayment } from "../../context/usePayment";
 
 type IconComponentProps = React.ComponentProps<typeof IconComponent>
 type PaymentType = keyof typeof PAYMENT_OPTIONS
@@ -14,9 +15,10 @@ interface ButtonPaymentProps extends Omit<IconComponentProps, 'ColorIcon'>  {
 
 export function ButtonPayment({ type, FontVariant = 'button-s', icon, selected = false }: ButtonPaymentProps) {
   const option = PAYMENT_OPTIONS[type]
+  const { setPaymentState } = usePayment();
 
   return (
-    <ButtonPaymentContainer className={FontVariant} $selected={selected}>
+    <ButtonPaymentContainer className={FontVariant} $selected={selected} onClick={() => setPaymentState({payment: type})}>
       <IconComponent icon={icon} ColorIcon="purple" variantSize={16} />
       {option.label}
     </ButtonPaymentContainer>

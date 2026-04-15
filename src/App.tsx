@@ -6,17 +6,20 @@ import { defaultTheme } from './styles/themes/default'
 import type React from "react"
 import { Outlet } from 'react-router-dom';
 import { AddressProvider } from './context/AddressProvider';
+import { PaymentProvider } from './context/PaymenProvider';
 
 export function App({
   children
-} : {
- children: React.ReactNode;
+}: {
+  children: React.ReactNode;
 }) {
   return (
     <ThemeProvider theme={defaultTheme}>
       <AddressProvider>
-        <Outlet /> 
-        {children}
+        <PaymentProvider>
+          <Outlet />
+          {children}
+        </PaymentProvider>
       </AddressProvider>
       <GlobalStyle />
     </ThemeProvider>
