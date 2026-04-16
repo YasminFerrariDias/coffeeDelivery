@@ -24,7 +24,11 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   function incrementItem(img: CoffeeImage) {
     const newCart = cart.map((item) => {
       if (item.img === img) {
-        return { ...item, amount: item.amount + 1 }
+        if (item.amount < 10) {
+          return { ...item, amount: item.amount + 1 }
+        } else {
+        return item
+      }
       } else {
         return item
       }
@@ -36,7 +40,11 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   function decrementItem(img: CoffeeImage) {
     const newCart = cart.map((item) => {
       if (item.img === img) {
-        return { ...item, amount: item.amount - 1 }
+        if (item.amount > 0) {
+          return { ...item, amount: item.amount - 1 }
+        } else {
+        return item
+      }
       } else {
         return item
       }
