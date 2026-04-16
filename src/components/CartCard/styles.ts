@@ -46,4 +46,8 @@ export const ButtonLink = styled(Link)`
   text-decoration: none;
 `;
 
+export const CardEmpty = styled.div`
+  text-align: center;
+  padding: 1rem;
+`;
   
