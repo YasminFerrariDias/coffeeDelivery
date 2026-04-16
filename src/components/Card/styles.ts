@@ -19,7 +19,7 @@ export const CardContainer = styled.div<CardContainerProps>`
       case 'mediumRounded':
         return (`
         width: 28rem;
-        height: 31.125rem;
+        max-height: auto;
         border-radius: 0.5rem 3rem 0.5rem 3rem;
       `)
 

@@ -3,12 +3,12 @@ import { Text } from '../Text'
 import { PriceContainer } from './styles'
 
 interface PriceProps {
-  $number: number | string
+  $price: number | string
   $variant: 'smallPrice' | 'mediumPrice' | 'largePrice' | 'smallLargePrice'
 }
 
-export function Price({ $number, $variant }: PriceProps) {
-  const formattedNumber = (typeof $number === 'number') ? $number.toFixed(2).replace('.', ',') : $number
+export function Price({ $price, $variant }: PriceProps) {
+  const formattedNumber = (typeof $price === 'number') ? $price.toFixed(2).replace('.', ',') : $price
 
   if ($variant === 'smallLargePrice') {
     return (

@@ -17,28 +17,27 @@ export function CartCard() {
 
         {cart.map((item) => {
           return (
-            <div key={`${item.name}-${item.price}-${item.amount}`}>
-              <CoffeeCartCard img={item.img} number={item.price} text={item.name} />
+            <div key={item.img}>
+              <CoffeeCartCard img={item.img} price={item.price} text={item.name} amount={item.amount}/>
               <Separate />
             </div>
           )
         })}
 
-
         <TotalInformation>
           <Row>
             <Text text="Total de itens" $variant="text-s" color="base-text" />
-            <Price $number={29.70} $variant="smallPrice" />
+            <Price $price={29.70} $variant="smallPrice" />
           </Row>
 
           <Row>
             <Text text="Entrega" $variant="text-s" color="base-text" />
-            <Price $number={3.50} $variant="smallPrice" />
+            <Price $price={3.50} $variant="smallPrice" />
           </Row>
 
           <Row>
             <Text text="Total" $variant="text-l-bold" color="base-subtitle" />
-            <Price $number={33.20} $variant="largePrice" />
+            <Price $price={33.20} $variant="largePrice" />
           </Row>
         </TotalInformation>
         <ButtonLink to="/success">

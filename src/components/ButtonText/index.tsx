@@ -11,11 +11,12 @@ interface ButtonProps extends TextProps, IconProps {
   ColorVariant: keyof DefaultTheme
   children?: React.ReactNode
   $ColorHover?: keyof DefaultTheme
+  onClick?: () => void
 }
 
-export function ButtonText({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children, $ColorHover }: ButtonProps) {
+export function ButtonText({ ColorVariant, icon, ColorIcon, $variant, color, text, variantSize, children, $ColorHover, onClick }: ButtonProps) {
   return (
-    <ButtonTextContainer $ColorVariant={ColorVariant} $ColorHover={$ColorHover}>
+    <ButtonTextContainer $ColorVariant={ColorVariant} $ColorHover={$ColorHover} onClick={onClick}>
       <IconComponent icon={icon} ColorIcon={ColorIcon} variantSize={variantSize}/>
       {text && (
         <Text
