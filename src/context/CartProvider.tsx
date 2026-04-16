@@ -47,37 +47,42 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   function decrementItem(img: CoffeeImage) {
-    const newCart = cart.map((item) => {
-      if (item.img === img) {
-        if (item.amount > 0) {
-          return { ...item, amount: item.amount - 1 }
-        } else {
-          return item
-        }
+    const item = cart.find(item => item.img === img)
+    
+    if (!item) return // se item não existe, retorna
+    
+    if (item.amount === 1) {
+        const newCart = cart.filter(item => item.img != img)
+        setCart(newCart)
       } else {
-        return item
+        const newCart = cart.map((item) => {
+          if (item.img === img) {
+            return { ...item, amount: item.amount - 1 }
+          }
+
+          return item
+        })
+
+        setCart(newCart)
       }
-    })
+    }
 
-    setCart(newCart)
+    function removeItem(img: CoffeeImage) {
+      const newCart = cart.filter((item) => item.img != img)
+      setCart(newCart)
+    }
+
+    return (
+      <CartContext.Provider
+        value={{
+          cart: cart,
+          addToCart: addToCart,
+          incrementItem: incrementItem,
+          decrementItem: decrementItem,
+          removeItem: removeItem,
+        }}
+      >
+        {children}
+      </CartContext.Provider>
+    )
   }
-
-  function removeItem(img: CoffeeImage) {
-    const newCart = cart.filter((item) => item.img != img)
-    setCart(newCart)
-  }
-
-  return (
-    <CartContext.Provider
-      value={{
-        cart: cart,
-        addToCart: addToCart,
-        incrementItem: incrementItem,
-        decrementItem: decrementItem,
-        removeItem: removeItem,
-      }}
-    >
-      {children}
-    </CartContext.Provider>
-  )
-}
