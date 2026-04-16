@@ -21,7 +21,7 @@ export function CartCard() {
       return false
     }
 
-    if (!address) {
+    if (!address?.cep || !address?.rua || !address?.numero || !address?.bairro || !address?.cidade || !address?.uf) {
       console.log("O endreço não pode estar vazio!")
       return false
     }
