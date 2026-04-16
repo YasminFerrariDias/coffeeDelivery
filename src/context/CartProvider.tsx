@@ -8,12 +8,18 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     setCartState(cart)
   }
 
-  function addToCart(item: CartProps) {
-    setCart([...cart, item])
-    console.log(item)
+  function addToCart(newItem: CartProps) {
+    const itemExists = cart.find(item => item.img === newItem.img)
+
+    if (itemExists) {
+      console.log("Já existe")
+      
+    } else {
+      console.log("Não existe")
+      setCart([...cart, newItem])
+    }
   }
 
-    console.log(cart)
   return (
     <CartContext.Provider
       value={{

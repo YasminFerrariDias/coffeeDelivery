@@ -7,7 +7,6 @@ import { Buttons, Description, Icon, Information, PaymentCardContainer } from ".
 
 export function PaymentCard() {
   const { payment } = usePayment()
-  console.log(payment)
 
   return (
     <PaymentCardContainer>
