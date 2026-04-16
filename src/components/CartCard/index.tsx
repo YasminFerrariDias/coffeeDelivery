@@ -49,7 +49,6 @@ export function CartCard() {
           <p><ButtonLink to="/">Clique aqui</ButtonLink> e vá as compras!</p>
         </CardEmpty>
         :
-
         <CartCardContainer>
           {cart.map((item) => {
             return (
