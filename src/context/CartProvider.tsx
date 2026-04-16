@@ -13,8 +13,17 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     const itemExists = cart.find(item => item.img === newItem.img)
 
     if (itemExists) {
-      console.log("Já existe")
-
+      const newCart = cart.map((item) => {
+        if (item.img === newItem.img) {
+          return {
+            ...item,
+            amount: item.amount + newItem.amount
+          }
+        }
+        return item
+      })
+      console.log("Existe")
+      setCart(newCart)
     } else {
       console.log("Não existe")
       setCart([...cart, newItem])
@@ -27,8 +36,8 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         if (item.amount < 10) {
           return { ...item, amount: item.amount + 1 }
         } else {
-        return item
-      }
+          return item
+        }
       } else {
         return item
       }
@@ -43,8 +52,8 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         if (item.amount > 0) {
           return { ...item, amount: item.amount - 1 }
         } else {
-        return item
-      }
+          return item
+        }
       } else {
         return item
       }
