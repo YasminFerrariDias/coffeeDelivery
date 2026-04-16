@@ -1,4 +1,6 @@
+import { PAYMENT_OPTIONS } from "../../consts/paymentType";
 import { useAddress } from "../../context/useAddress";
+import { usePayment } from "../../context/usePayment";
 
 import { IconBadge } from "../IconBadge";
 import { Text } from "../Text";
@@ -6,6 +8,7 @@ import { Info, InfoItem, SuccessCardContainer, Delivery } from "./styles";
 
 export function SuccessCard() {
   const { address } = useAddress();
+  const { payment } = usePayment();
 
   return (
     <SuccessCardContainer>
@@ -32,7 +35,7 @@ export function SuccessCard() {
         <IconBadge icon={"DollarSign"} $BackgroundVariant="yellow-dark" />
         <Info>
           <Text text="Pagamento na entrega" color="base-text" $variant="text-m" />
-          <Text text="Cartão de Crédito" color="base-text" $variant="text-m-bold" />
+          <Text text={payment?.payment ? PAYMENT_OPTIONS[payment.payment].label : "Não selecionado"} color="base-text" $variant="text-m-bold" />
         </Info>
       </InfoItem>
     </ SuccessCardContainer>
