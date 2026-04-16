@@ -1,14 +1,17 @@
 import { CountContainer, Operation, Result } from "./styles";
 import { Number } from "../Number";
 import { IconComponent } from "../IconComponent";
-import { useCounter } from "../../hooks/useCounter";
 
-export function Count() {
-  const [count, addItems, removeItems] = useCounter();
+interface CountProps{
+  count: number;
+  onRemove: () => void
+  onAdd: () => void;
+}
 
+export function Count({ count, onRemove, onAdd }: CountProps) {
   return (
     <CountContainer>
-      <Operation onClick={removeItems}>
+      <Operation onClick={onRemove}>
         <IconComponent icon="Minus" ColorIcon="purple" variantSize={14} $ColorIconHover="purple-dark" />
       </Operation>
 
@@ -16,7 +19,7 @@ export function Count() {
         <Number $variantColor="base-title" $variantText="text-m" $number={count} className='number' />
       </Result>
 
-      <Operation onClick={addItems}>
+      <Operation onClick={onAdd}>
         <IconComponent icon="Plus" ColorIcon="purple" variantSize={14} $ColorIconHover="purple-dark" />
       </Operation>
     </CountContainer>
