@@ -11,6 +11,12 @@ export type CoffeeImage = keyof typeof coffeeImages;
 export function CartCard() {
   const { cart } = useCart();
 
+  const totalItem = cart.reduce((accumulator, item) => {
+    return accumulator + (item.amount * item.price);
+  }, 0); 
+  const delivery = 3.5
+  const total = totalItem + delivery
+
   return (
     <Card $variant="mediumRounded">
       <CartCardContainer>
@@ -18,7 +24,7 @@ export function CartCard() {
         {cart.map((item) => {
           return (
             <div key={item.img}>
-              <CoffeeCartCard img={item.img} price={item.price} text={item.name} amount={item.amount}/>
+              <CoffeeCartCard img={item.img} price={item.price} text={item.name} amount={item.amount} />
               <Separate />
             </div>
           )
@@ -27,17 +33,17 @@ export function CartCard() {
         <TotalInformation>
           <Row>
             <Text text="Total de itens" $variant="text-s" color="base-text" />
-            <Price $price={29.70} $variant="smallPrice" />
+            <Price $price={totalItem} $variant="smallPrice" />
           </Row>
 
           <Row>
             <Text text="Entrega" $variant="text-s" color="base-text" />
-            <Price $price={3.50} $variant="smallPrice" />
+            <Price $price={delivery} $variant="smallPrice" />
           </Row>
 
           <Row>
             <Text text="Total" $variant="text-l-bold" color="base-subtitle" />
-            <Price $price={33.20} $variant="largePrice" />
+            <Price $price={total} $variant="largePrice" />
           </Row>
         </TotalInformation>
         <ButtonLink to="/success">
