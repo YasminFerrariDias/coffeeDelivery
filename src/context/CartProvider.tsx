@@ -22,10 +22,8 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         }
         return item
       })
-      console.log("Existe")
       setCart(newCart)
     } else {
-      console.log("Não existe")
       setCart([...cart, newItem])
     }
   }

@@ -18,12 +18,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = (user: UserProps) => {
     setUser(user);
-
-    console.log(user);
   }
 
   const logout = () => {
-    console.log('logout')
   }
 
   return (

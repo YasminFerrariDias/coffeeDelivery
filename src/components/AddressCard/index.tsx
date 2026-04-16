@@ -12,7 +12,6 @@ export function AddressCard() {
   const { register, handleSubmit } = useForm<AddressProps>();
 
   const handleSetAddress = (data: AddressProps) => {
-    console.log("DADOS DO FORM:", data);
     setAddressState(data);
   } 
 
@@ -29,7 +28,7 @@ export function AddressCard() {
           </Description>
         </Information>
         
-        <Form onSubmit={handleSubmit(handleSetAddress)}>
+        <Form onChange={handleSubmit(handleSetAddress)}>
           <RowOne>
             <InputText $variableSize="small" placeholder="CEP" {...register("cep")} />
           </RowOne>
@@ -49,7 +48,7 @@ export function AddressCard() {
             <InputText $variableSize="medium" placeholder="Cidade " {...register("cidade")} />
             <InputText $variableSize="mini" placeholder="UF" {...register("uf")} />
           </RowFour>
-          <button type="submit">Salvar</button>
+      
         </Form>
       </Card>
 

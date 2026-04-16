@@ -1,5 +1,7 @@
 import type { coffeeImages } from "../../consts/coffeeImages";
+import { useAddress } from "../../context/useAddress";
 import { useCart } from "../../context/useCart";
+import { usePayment } from "../../context/usePayment";
 import { Card } from "../Card";
 import { CoffeeCartCard } from "../CoffeeCartCard";
 import { Price } from "../Price";
@@ -9,11 +11,32 @@ import { Button, ButtonLink, CartCardContainer, Row, Separate, TotalInformation 
 export type CoffeeImage = keyof typeof coffeeImages;
 
 export function CartCard() {
-  const { cart } = useCart();
+  const { cart } = useCart()
+  const { address } = useAddress()
+  const { payment } = usePayment()
+
+  function validationComponents() {
+    if (cart.length === 0) {
+      console.log("O carrinho não pode estar vazio!")
+      return false
+    }
+
+    if (!address) {
+      console.log("O endreço não pode estar vazio!")
+      return false
+    }
+
+    if (!payment) {
+      console.log("A forma de pagamento não pode estar vazio!")
+      return false
+    }
+
+    return true
+  }
 
   const totalItem = cart.reduce((accumulator, item) => {
     return accumulator + (item.amount * item.price);
-  }, 0); 
+  }, 0);
   const delivery = 3.5
   const total = totalItem + delivery
 
@@ -46,7 +69,14 @@ export function CartCard() {
             <Price $price={total} $variant="largePrice" />
           </Row>
         </TotalInformation>
-        <ButtonLink to="/success">
+        <ButtonLink
+          to="/success"
+          onClick={(e) => {
+            if (!validationComponents()) {
+              e.preventDefault();
+            }
+          }}
+        >
           <Button><Text text="CONFIRMAR PEDIDO" color="white" $variant="button-g" /></Button>
         </ButtonLink>
       </CartCardContainer>

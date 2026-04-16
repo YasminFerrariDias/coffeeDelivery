@@ -54,13 +54,6 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
               $ColorHover="purple"
               onClick={() => {
                 if (count != 0) {
-                  console.log("Clicou no carrinho");
-                  console.log({
-                    img,
-                    name: textTitle,
-                    price,
-                    amount: count,
-                  });
                   addToCart({
                     img,
                     name: textTitle,
@@ -68,7 +61,7 @@ export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCard
                     amount: count,
                   });
                 } else {
-                  console.log("ERROOOR")
+                  return
                 }
               }} />
           </AddCart>
