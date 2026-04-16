@@ -17,7 +17,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         if (item.img === newItem.img) {
           return {
             ...item,
-            amount: item.amount + newItem.amount
+            amount: Math.min(10, item.amount + newItem.amount)
           }
         }
         return item
