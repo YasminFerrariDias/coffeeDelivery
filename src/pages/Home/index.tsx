@@ -1,4 +1,4 @@
-import { Banner } from "../../components/Banner";
+import { Banner } from "../../components/Banner/index";
 import { Header } from "../../components/Header";
 import { Menu } from "../../components/Menu";
 
