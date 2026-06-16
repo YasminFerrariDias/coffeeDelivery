@@ -20,6 +20,8 @@ export const MenuContainer = styled.div`
   margin: 0 auto;
   margin-bottom: 5rem;
   padding: 0 2rem; 
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 768px) {
     width: 90%;
