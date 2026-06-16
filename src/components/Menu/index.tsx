@@ -10,7 +10,7 @@ export function Menu() {
         <Title text="Nossos Cafés" $variant="title-l" $color="base-subtitle" />
       </Text>
 
-      <MenuCoffee>
+      <MenuCoffee className="md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {
           coffees.map(({ img, tagValue, textTitle, text, price }) => (
             <CoffeeCard key={textTitle} img={img} tagValue={tagValue} textTitle={textTitle} text={text} price={price} />
