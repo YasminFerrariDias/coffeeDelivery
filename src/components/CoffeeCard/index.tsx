@@ -20,7 +20,6 @@ interface CoffeeCardProps {
   textTitle: string
   price: number
   img: CoffeeImage
-  amount: number
 }
 
 export function CoffeeCard({ img, tagValue, textTitle, text, price }: CoffeeCardProps) {
