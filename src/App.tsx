@@ -12,7 +12,7 @@ import { CartProvider } from './context/CartProvider';
 export function App({
   children
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <ThemeProvider theme={defaultTheme}>
