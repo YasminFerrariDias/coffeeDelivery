@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Coffee Delivery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de e-commerce de cafés com carrinho de compras, seleção de itens, formulário de endereço e confirmação de pedido, desenvolvida com React e TypeScript.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [React](https://react.dev/) — biblioteca de interface
+- [TypeScript](https://www.typescriptlang.org/) — tipagem estática
+- [Vite](https://vitejs.dev/) — bundler e servidor de desenvolvimento
+- [React Router DOM](https://reactrouter.com/) — navegação entre páginas
+- [Context API](https://react.dev/reference/react/createContext) — gerenciamento de estado global do carrinho
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Listagem de cafés disponíveis
+- Adição e remoção de itens no carrinho
+- Controle de quantidade por item
+- Formulário de endereço de entrega
+- Seleção de método de pagamento
+- Página de confirmação do pedido
 
-Note: This will impact Vite dev & build performances.
+## Como Executar
 
-## Expanding the ESLint configuration
+Requisito: [Node.js](https://nodejs.org/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Instalar dependências
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Iniciar o servidor
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Acesse: `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Deploy
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[coffee-delivery-ashen.vercel.app](https://coffee-delivery-ashen.vercel.app)
