@@ -1,10 +1,10 @@
 # Coffee Delivery
 
-Aplicação de e-commerce de cafés com carrinho de compras, seleção de itens, formulário de endereço e confirmação de pedido, desenvolvida com React e TypeScript.
+Aplicação de e-commerce de cafés com carrinho de compras, formulário de endereço e confirmação de pedido, desenvolvida com React e TypeScript.
 
 ## Tecnologias
 
-- [React](https://react.dev/) — biblioteca de interface
+- [React](https://react.dev/) — biblioteca para construção de interfaces
 - [TypeScript](https://www.typescriptlang.org/) — tipagem estática
 - [Vite](https://vitejs.dev/) — bundler e servidor de desenvolvimento
 - [React Router DOM](https://reactrouter.com/) — navegação entre páginas
@@ -21,18 +21,15 @@ Aplicação de e-commerce de cafés com carrinho de compras, seleção de itens,
 
 ## Como Executar
 
-Requisito: [Node.js](https://nodejs.org/)
-
 ```bash
-# Instalar dependências
 npm install
-
-# Iniciar o servidor
 npm run dev
 ```
 
-Acesse: `http://localhost:5173`
-
 ## Deploy
 
-[coffee-delivery-ashen.vercel.app](https://coffee-delivery-ashen.vercel.app)
+[Coffee Delivery](https://coffee-delivery-ashen.vercel.app)
+
+## Sobre
+
+Projeto desenvolvido durante o curso Ignite da [Rocketseat](https://www.rocketseat.com.br/), com foco em React, TypeScript, Context API e React Router DOM.
